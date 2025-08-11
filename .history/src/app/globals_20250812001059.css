@@ -1,0 +1,37 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* ==== Styles globaux ==== */
+html, body {
+  height: 100%;
+  background-color: #ffffff;
+  color: #111827; /* text-gray-900 */
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  color: #111827;
+  font-weight: 700;
+}
+
+a {
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* Boutons modernes */
+.btn-primary {
+  @apply px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition;
+}
+
+.btn-outline {
+  @apply px-6 py-3 rounded-xl border border-gray-300 text-gray-800 font-semibold hover:bg-gray-50 transition;
+}

@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Base lisible & contrastée */
+:root { color-scheme: light; }
+html, body {
+  height: 100%;
+  background:#fff;
+  color:#111827; /* text-gray-900 */
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+p { line-height: 1.7; }
+h1, h2, h3, h4 { color:#111827; font-weight: 800; letter-spacing:-0.02em; }
+a { color: theme(colors.brand.DEFAULT); text-underline-offset:3px; transition: color .2s ease; }
+a:hover { color: theme(colors.brand.dark); }
+
+/* Helpers boutons (palette brand) */
+.btn-primary {
+  @apply px-6 py-3 rounded-xl bg-brand text-white font-semibold shadow-soft
+         hover:bg-brand-dark hover:shadow-xl transition focus:outline-none
+         focus:ring-2 focus:ring-brand focus:ring-offset-2;
+}
+.btn-ghost {
+  @apply px-6 py-3 rounded-xl border border-gray-300 text-gray-900 font-semibold
+         hover:bg-gray-50 transition focus:outline-none
+         focus:ring-2 focus:ring-brand focus:ring-offset-2;
+}
+
+/* Cartes & conteneur */
+.card { @apply rounded-2xl border border-gray-200 bg-white p-6 shadow-soft; }
+.card:hover { @apply shadow-xl; }
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }

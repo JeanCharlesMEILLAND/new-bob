@@ -1,0 +1,27 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Forcer un fond clair par défaut */
+html, body {
+  height: 100%;
+  background-color: #ffffff;
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Améliorer la lisibilité des paragraphes */
+p {
+  line-height: 1.6;
+}
+
+/* Contraste sur les titres */
+h1, h2, h3 {
+  color: #111827; /* text-gray-900 */
+}
+
+/* Contraste des liens */
+a {
+  color: #2563eb; /* text-blue-600 */
+}
+a:hover {
+  color: #1d4ed8; /* text-blue-700 */
+}

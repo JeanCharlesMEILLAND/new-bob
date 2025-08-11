@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* ================================
+   Base lisible, contrastée
+=================================== */
+:root { color-scheme: light; }
+
+html, body {
+  height: 100%;
+  background: #ffffff;
+  color: #111827; /* gray-900 */
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+p { line-height: 1.7; }
+h1, h2, h3, h4 { color:#111827; font-weight: 800; letter-spacing:-0.02em; }
+
+a {
+  color: #2563eb; /* blue-600 */
+  text-underline-offset: 3px;
+  transition: color .2s ease;
+}
+a:hover { color: #1d4ed8; } /* blue-700 */
+
+/* ================================
+   Helpers de mise en page
+=================================== */
+.container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* Cartes (avec anim douce) */
+.card {
+  @apply rounded-2xl border border-gray-200 bg-white p-6 shadow-soft
+         transition-transform duration-200;
+}
+.card:hover { @apply shadow-xl-soft; transform: translateY(-2px) scale(1.01); }
+
+/* Ombres premium supplémentaires (générées via tailwind.config.js) */
+/* .shadow-soft et .shadow-xl-soft sont maintenant de vraies utilities */
+
+/* ================================
+   Boutons (palette brand/accent)
+=================================== */
+.btn-base {
+  @apply inline-flex items-center justify-center gap-2
+         rounded-xl font-semibold transition
+         focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+/* Principal (brand) */
+.btn-primary {
+  @apply btn-base px-6 py-3 text-white shadow-soft
+         bg-brand hover:bg-brand-dark hover:shadow-xl-soft
+         focus:ring-brand;
+}
+
+/* Secondaire (contour) */
+.btn-ghost {
+  @apply btn-base px-6 py-3 text-gray-900 border border-gray-300
+         hover:bg-gray-50 focus:ring-brand;
+}
+
+/* Tertiaire (plein gris) */
+.btn-secondary {
+  @apply btn-base px-6 py-3 bg-gray-100 text-gray-900
+         hover:bg-gray-200 focus:ring-brand;
+}
+
+/* Lien-bouton (accent) */
+.btn-accent {
+  @apply btn-base px-6 py-3 text-white bg-accent
+         hover:opacity-90 focus:ring-accent;
+}
+
+/* Icône + texte alignés */
+.btn-icon { @apply inline-flex items-center gap-2; }
+
+/* ================================
+   Badges / Puces
+=================================== */
+.badge-dot {
+  @apply inline-block h-2 w-2 rounded-full bg-brand;
+}
+
+/* ================================
+   Sections décoratives (halos)
+=================================== */
+.halo-brand   { background: color-mix(in oklab, var(--brand, #4f46e5) 20%, transparent); filter: blur(60px); }
+.halo-accent  { background: color-mix(in oklab, var(--accent, #9333ea) 20%, transparent); filter: blur(60px); }
+
+/* ================================
+   Mode sombre auto
+=================================== */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: dark; }
+
+  html, body { background:#0b0b0f; color:#f3f4f6; } /* near black + gray-100 */
+  a { color:#93c5fd; }       /* blue-300 */
+  a:hover { color:#60a5fa; } /* blue-400 */
+
+  .card { @apply border-gray-800 bg-[#111318]; }
+  .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+
+  .btn-ghost { @apply border-gray-700 text-gray-100 hover:bg-gray-800; }
+  .btn-secondary { @apply bg-gray-800 text-gray-100 hover:bg-gray-700; }
+
+  /* header/footer teintent légèrement pour lisibilité */
+  header, footer { @apply bg-darkSurface/90; }
+}
+
+/* ================================
+   Utilitaires de texte sûrs
+=================================== */
+.text-strong { @apply text-gray-900; }
+.text-muted  { @apply text-gray-700; }
+.text-soft   { @apply text-gray-600; }
+
+@media (prefers-color-scheme: dark) {
+  .text-strong { @apply text-gray-100; }
+  .text-muted  { @apply text-gray-200; }
+  .text-soft   { @apply text-gray-400; }
+}
