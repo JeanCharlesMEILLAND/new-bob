@@ -46,10 +46,10 @@ export default function HowItWorks() {
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold">Comment ça marche&nbsp;?</h2>
-          <p className="mt-3 text-black/80">
-            Un flux simple et 100% privé&nbsp;: <span className="text-black">choisir</span> →{' '}
-            <span className="text-black">envoyer</span> → <span className="text-black">confirmer</span> →{' '}
-            <span className="text-black">rappels automatiques</span>.
+          <p className="mt-3 text-white/80">
+            Un flux simple et 100% privé&nbsp;: <span className="text-white">choisir</span> →{' '}
+            <span className="text-white">envoyer</span> → <span className="text-white">confirmer</span> →{' '}
+            <span className="text-white">rappels automatiques</span>.
           </p>
         </div>
 

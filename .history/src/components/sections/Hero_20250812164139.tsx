@@ -11,7 +11,7 @@ export default function Hero() {
 
       <Container className="text-center  space-y-10">
         {/* Badge conformité */}
-        <div className="-mt-6 inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-sm text-black/80">
+        <div className="-mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
           Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
         </div>
 
@@ -21,10 +21,10 @@ export default function Hero() {
         </h1>
 
         {/* Sous-titre */}
-        <p className="mx-auto max-w-3xl text-lg text-black/80 leading-relaxed">
-          Gérez vos échanges d’<strong className="text-black">objets</strong>, de{' '}
-          <strong className="text-black">services</strong> et vos{' '}
-          <strong className="text-black">événements</strong>  — en toute simplicité et confidentialité,
+        <p className="mx-auto max-w-3xl text-lg text-white/80 leading-relaxed">
+          Gérez vos échanges d’<strong className="text-white">objets</strong>, de{' '}
+          <strong className="text-white">services</strong> et vos{' '}
+          <strong className="text-white">événements</strong>  — en toute simplicité et confidentialité,
           uniquement avec vos contacts.
         </p>
 

@@ -111,17 +111,17 @@ export default function Navbar() {
             open ? 'max-h-96' : 'max-h-0'
           )}
         >
-          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-black/90">
-            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-white/90">
+            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
               Fonctionnalités
             </a>
-            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
               Comment ça marche
             </a>
-            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
               Événements
             </a>
-            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
               Confidentialité
             </a>
           </nav>
