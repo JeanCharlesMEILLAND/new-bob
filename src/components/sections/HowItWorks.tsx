@@ -3,7 +3,7 @@ import Container from '@/components/ui/Container'
 
 function IconWrap({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-[#05B1F5] to-[#166DF6]">
       {children}
     </div>
   )
