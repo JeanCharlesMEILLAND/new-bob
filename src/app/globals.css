@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --bg: #EDEDED;
+    --bg: #EDF3FF;
     --fg: #121318;
     --custom-text-color: #25416E
 }
