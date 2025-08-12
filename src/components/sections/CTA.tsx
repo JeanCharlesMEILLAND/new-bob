@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import {motion} from "framer-motion";
 
 export const CTA = () => {
   return (
@@ -15,25 +17,46 @@ export const CTA = () => {
           />
         </div>
 
-        <div
+        <motion.div
+            initial={{opacity: 0, y: 30}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true, amount: 0.2}}
+            transition={{duration: 0.8}}
             className="relative px-6 py-10 sm:px-10 sm:py-14 rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]">
           {/* Content + Image wrapper */}
           <div className="relative z-10 h-fit">
             {/* Left: content (takes left half on md+) */}
             <div className="text-white space-y-6 md:w-1/2 md:pr-10">
-              <h2 className="text-3xl sm:text-5xl leading-tight">
+              <motion.h2
+                  initial={{opacity: 0, x: -20}}
+                  whileInView={{opacity: 1, x: 0}}
+                  viewport={{once: true}}
+                  transition={{duration: 0.6, delay: 0.2}}
+                  className="text-3xl sm:text-5xl leading-tight">
                 Commencer à bober dès maintenant !
-              </h2>
+              </motion.h2>
 
-              <p className="text-white/95 leading-relaxed max-w-2xl">
+              <motion.p
+                  initial={{opacity: 0, x: -20}}
+                  whileInView={{opacity: 1, x: 0}}
+                  viewport={{once: true}}
+                  transition={{duration: 0.6, delay: 0.3}}
+                  className="text-white/95 leading-relaxed max-w-2xl">
                 Avec BOB, organiser vos échanges privés devient simple et bien
                 suivi. L'application est 100% gratuite, sans paiements ni
                 abonnements, et toutes les fonctionnalités sont incluses.
-              </p>
+              </motion.p>
 
               {/* Store badges */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
+              <motion.div
+                  initial={{opacity: 0, y: 20}}
+                  whileInView={{opacity: 1, y: 0}}
+                  viewport={{once: true}}
+                  transition={{duration: 0.6, delay: 0.4}}
+                  className="flex flex-wrap items-center gap-4 pt-2">
+                <motion.a
+                    whileHover={{scale: 1.05}}
+                    whileTap={{scale: 0.95}}
                     href="https://apps.apple.com/app/id6743935044"
                     aria-label="Télécharger BOB sur l'App Store"
                     target="_blank"
@@ -47,8 +70,10 @@ export const CTA = () => {
                       height={54}
                       priority
                   />
-                </a>
-                <a
+                </motion.a>
+                <motion.a
+                    whileHover={{scale: 1.05}}
+                    whileTap={{scale: 0.95}}
                     href="https://play.google.com/store/apps/details?id=com.bobapp"
                     aria-label="Télécharger BOB sur Google Play"
                     target="_blank"
@@ -62,12 +87,16 @@ export const CTA = () => {
                       height={54}
                       priority
                   />
-                </a>
-              </div>
+                </motion.a>
+              </motion.div>
             </div>
 
             {/* Right: image (absolute on md+, exactly half width) */}
-            <div
+            <motion.div
+                initial={{opacity: 0, x: 50}}
+                whileInView={{opacity: 1, x: 0}}
+                viewport={{once: true}}
+                transition={{duration: 0.8, delay: 0.5}}
                 className="mt-8 md:mt-0 md:absolute md:-bottom-2 md:inset-y-0 md:right-0 md:w-1/2 flex items-center justify-center">
               <Image
                   src="/Group%201000001285%20(1).png"
@@ -77,7 +106,7 @@ export const CTA = () => {
                   className="w-full max-w-[560px] h-auto object-contain drop-shadow-2xl scale-[130%]"
                   priority
               />
-            </div>
+            </motion.div>
           </div>
 
           {/* Optional subtle right-side decoration */}
@@ -85,7 +114,7 @@ export const CTA = () => {
               aria-hidden="true"
               className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(80%_80%_at_70%_50%,rgba(255,255,255,0.35)_0%,transparent_70%)]"
           />
-        </div>
+        </motion.div>
       </Container>
   );
 };
