@@ -49,25 +49,22 @@ export default function Features() {
           id={"features"}
       >
         {/* Left column (rows 1..3) */}
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="ml-5 col-start-1 row-start-1">
           <FeaturesCard
-              className="ml-5 col-start-1 row-start-1"
               icon={"/icons/Entre proches.svg"}
               title={"Entre proches uniquement"}
               description={"Fonctionne avec les contacts de votre téléphone. Pas d'annuaire public, pas d'inconnus."}
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="mr-5 col-start-1 row-start-2">
           <FeaturesCard
-              className="mr-5 col-start-1 row-start-2"
               icon={"/icons/Frame 1597880141.svg"}
               title={"Messagerie intégrée"}
               description={"Discutez en tête-à-tête pour vos échanges ou utilisez le chat d'événement pour coordonner un groupe."}
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="ml-5 col-start-1 row-start-3">
           <FeaturesCard
-              className="ml-5 col-start-1 row-start-3"
               icon={"/icons/Frame 1597880138.svg"}
               title={"Échanges d'objets & services"}
               description={"Proposez ou demandez en privé : un geste, une confirmation… et l'échange est suivi automatiquement."}
@@ -89,25 +86,22 @@ export default function Features() {
         </motion.div>
 
         {/* Right column (rows 1..3) */}
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="mr-5 col-start-3 row-start-1">
           <FeaturesCard
-              className="mr-5 col-start-3 row-start-1"
               icon={"/icons/Frame 1597880140.svg"}
               title={"Rappels & agenda"}
               description={"Rappels automatiques des deux côtés et ajout à l'agenda pour éviter les oublis."}
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="ml-5 col-start-3 row-start-2">
           <FeaturesCard
-              className="ml-5 col-start-3 row-start-2"
               icon={"/icons/Frame 1597880139.svg"}
               title={"Événements privés"}
               description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."}
           />
         </motion.div>
-        <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants} className="mr-5 col-start-3 row-start-3">
           <FeaturesCard
-              className="mr-5 col-start-3 row-start-3"
               icon={"/icons/Frame 1597880142.svg"}
               title={"Confidentialité intégrée"}
               description={"Aucune transaction financière. Aucune mise en relation publique. Historique personnel."}
