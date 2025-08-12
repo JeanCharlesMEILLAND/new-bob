@@ -42,7 +42,7 @@ export default function Navbar() {
         scrolled ? 'bg-black/50 backdrop-blur ' : 'bg-transparent'
       )}
     >
-      <Container className={clsx('flex items-center justify-between', scrolled ? 'py-3' : 'py-4')}>
+      <Container className={clsx('flex items-center justify-between transition-all duration-300', scrolled ? 'py-6' : 'py-8')}>
         {/* Logo + texte */}
         <Link href="/" aria-label="Accueil" className="flex items-center gap-3">
           <Image
@@ -54,22 +54,22 @@ export default function Navbar() {
             priority
           />
         <div className="flex flex-col leading-tight">
-            <span className="text-lg font-bold text-black tracking-wide">Borrow and Back</span>
+            <span className="text-lg font-bold text-accent tracking-wide">Borrow and Back</span>
           </div>
         </Link>
 
         {/* Nav desktop */}
-        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-7 text-sm text-black/80">
-          <a href="#features" className="hover:text-black">Fonctionnalités</a>
-          <a href="#how" className="hover:text-black">Comment ça marche</a>
-          <a href="#events" className="hover:text-black">Événements</a>
-          <a href="#privacy" className="hover:text-black">Confidentialité</a>
+        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-7 text-sm text-accent/80">
+          <a href="#features" className="hover:text-accent">Fonctionnalités</a>
+          <a href="#how" className="hover:text-accent">Comment ça marche</a>
+          <a href="#events" className="hover:text-accent">Événements</a>
+          <a href="#privacy" className="hover:text-accent">Confidentialité</a>
         </nav>
 
         {/* Bouton menu mobile */}
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-xl2 px-3 py-2 ring-1 ring-black/10 bg-black/5 text-black/90"
+          className="md:hidden inline-flex items-center justify-center rounded-xl2 px-3 py-2 ring-1 ring-black/10 bg-black/5 text-accent/90"
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-controls={MENU_ID}
           aria-expanded={open}
@@ -111,7 +111,7 @@ export default function Navbar() {
             open ? 'max-h-96' : 'max-h-0'
           )}
         >
-          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-black/90">
+          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-accent/90">
             <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
               Fonctionnalités
             </a>

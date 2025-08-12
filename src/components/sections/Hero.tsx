@@ -7,9 +7,9 @@ export default function Hero() {
       <section className="relative pt-28 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-0 block">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 block">
           <Image
-              src="/hero1.png"
+              src="/circle.svg"
               alt=""
               width={1000}
               height={1000}
@@ -23,7 +23,7 @@ export default function Hero() {
 
         <Container className="text-center space-y-10 relative z-10">
           {/* Badge conformité */}
-          <div className="-mt-6 inline-flex items-center gap-2 rounded-full border border-accent px-4 py-2 text-sm text-[--custom-text-color]">
+          <div className="-mt-6 inline-flex items-center gap-2 rounded-full border border-accent px-4 py-2 text-sm text-accent">
             Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
           </div>
 
@@ -33,12 +33,15 @@ export default function Hero() {
           </h1>
 
           {/* Sous-titre */}
-          <p className="mx-auto max-w-3xl text-lg text-rh leading-relaxed">
-            Gérez vos échanges d&#39;<strong className="text-[--custom-text-color]">objets</strong>, de{' '}
-            <strong className="text-[--custom-text-color]">services</strong> et vos{' '}
-            <strong className="text-[--custom-text-color]">événements</strong>  — en toute simplicité et confidentialité,
+          <p className="mx-auto max-w-3xl text-lg text-accent leading-relaxed">
+            Gérez vos échanges d&#39;<strong className="text-accent">objets</strong>, de{' '}
+            <strong className="text-accent">services</strong> et vos{' '}
+            <strong className="text-accent">événements</strong>  — en toute simplicité et confidentialité,
             uniquement avec vos contacts.
           </p>
+
+          {/* Légende rapprochée */}
+          <p className="text-base text-accent -mt-2">Disponible sur iOS et Android</p>
 
           {/* Badges stores */}
           <div id="download" className="flex flex-wrap items-center justify-center gap-5 pt-4">
@@ -60,8 +63,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Légende rapprochée */}
-          <p className="text-base text-rhino -mt-2">Disponible sur iOS et Android</p>
+
 
           {/* Visuel placeholder */}
           <div className='flex justify-center mt-10'>

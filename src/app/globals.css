@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --bg: #FFFAEF;
+    --bg: #EDEDED;
     --fg: #121318;
     --custom-text-color: #25416E
 }
@@ -26,6 +26,8 @@ html, body {
     --color-brand-700: #2549c6;
     --color-brand-800: #1f3ca0;
     --color-brand-900: #0F55C5;
+
+    --color-accent : #25416E;
 
     /* Radius */
     --radius-xl2: 1.25rem; /* => rounded-xl2 */
