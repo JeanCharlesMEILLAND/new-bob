@@ -74,9 +74,9 @@ export default function Hero() {
             </div>
             <Image src="/central.png" alt="Aperçu de l'événement"  width={400} height={400} className="flex-1" />
             <div className={"flex flex-col flex-1 gap-8 justify-center"}>
-              <FeaturesCard className={"mr-5"} icon={"/icons/Entre proches.svg"} title={"Rappels & agenda"} description={"Rappels automatiques des deux côtés et ajout à l’agenda pour éviter les oublis."} />
-              <FeaturesCard className={"ml-5"} icon={"/icons/Entre proches.svg"} title={"Événements privés"} description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."} />
-              <FeaturesCard className={"m-5"} icon={"/icons/Entre proches.svg"} title={"Confidentialité intégrée"} description={"Aucune transaction financière. Aucune mise en relation publique. Historique personnel."} />
+              <FeaturesCard className={"mr-5"} icon={"/icons/Frame 1597880140.svg"} title={"Rappels & agenda"} description={"Rappels automatiques des deux côtés et ajout à l’agenda pour éviter les oublis."} />
+              <FeaturesCard className={"ml-5"} icon={"/icons/Frame 1597880139.svg"} title={"Événements privés"} description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."} />
+              <FeaturesCard className={"m-5"} icon={"/icons/Frame 1597880142.svg"} title={"Confidentialité intégrée"} description={"Aucune transaction financière. Aucune mise en relation publique. Historique personnel."} />
             </div>
           </div>
 
