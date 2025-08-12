@@ -41,29 +41,29 @@ export default function Features() {
           variants={containerVariants}
           className="
               mt-10
-              grid grid-cols-[1fr_1.6fr_1fr] grid-rows-3 gap-6
+              grid grid-cols-1 md:grid-cols-[1fr_1.6fr_1fr] grid-rows-auto md:grid-rows-3 gap-6
               items-center justify-items-stretch
-              max-w-6xl mx-auto overflow-visible
+              max-w-6xl mx-auto overflow-visible px-4 sm:px-6 md:px-8
               relative z-20
             "
           id={"features"}
       >
-        {/* Left column (rows 1..3) */}
-        <motion.div variants={itemVariants} className="ml-5 col-start-1 row-start-1">
+        {/* Left column (rows 1..3) on desktop, regular items on mobile */}
+        <motion.div variants={itemVariants} className="mx-auto md:ml-5 md:col-start-1 md:row-start-1">
           <FeaturesCard
               icon={"/icons/Entre proches.svg"}
               title={"Entre proches uniquement"}
               description={"Fonctionne avec les contacts de votre téléphone. Pas d'annuaire public, pas d'inconnus."}
           />
         </motion.div>
-        <motion.div variants={itemVariants} className="mr-5 col-start-1 row-start-2">
+        <motion.div variants={itemVariants} className="mx-auto md:mr-5 md:col-start-1 md:row-start-2">
           <FeaturesCard
               icon={"/icons/Frame 1597880141.svg"}
               title={"Messagerie intégrée"}
               description={"Discutez en tête-à-tête pour vos échanges ou utilisez le chat d'événement pour coordonner un groupe."}
           />
         </motion.div>
-        <motion.div variants={itemVariants} className="ml-5 col-start-1 row-start-3">
+        <motion.div variants={itemVariants} className="mx-auto md:ml-5 md:col-start-1 md:row-start-3">
           <FeaturesCard
               icon={"/icons/Frame 1597880138.svg"}
               title={"Échanges d'objets & services"}
@@ -71,36 +71,36 @@ export default function Features() {
           />
         </motion.div>
 
-        {/* Center image spanning all 3 middle rows */}
+        {/* Center image - full width on mobile, spanning all 3 middle rows on desktop */}
         <motion.div
             variants={imageVariants}
-            className="col-start-2 row-start-1 row-span-3 justify-self-center self-center"
+            className="my-8 md:my-0 md:col-start-2 md:row-start-1 md:row-span-3 justify-self-center self-center"
         >
           <Image
               src="/central.png"
               alt="Aperçu de l'événement"
               width={700}
               height={700}
-              className="w-full h-auto object-contain z-10"
+              className="w-full h-auto max-w-[300px] md:max-w-full object-contain z-10 mx-auto"
           />
         </motion.div>
 
-        {/* Right column (rows 1..3) */}
-        <motion.div variants={itemVariants} className="mr-5 col-start-3 row-start-1">
+        {/* Right column (rows 1..3) on desktop, regular items on mobile */}
+        <motion.div variants={itemVariants} className="mx-auto md:mr-5 md:col-start-3 md:row-start-1">
           <FeaturesCard
               icon={"/icons/Frame 1597880140.svg"}
               title={"Rappels & agenda"}
               description={"Rappels automatiques des deux côtés et ajout à l'agenda pour éviter les oublis."}
           />
         </motion.div>
-        <motion.div variants={itemVariants} className="ml-5 col-start-3 row-start-2">
+        <motion.div variants={itemVariants} className="mx-auto md:ml-5 md:col-start-3 md:row-start-2">
           <FeaturesCard
               icon={"/icons/Frame 1597880139.svg"}
               title={"Événements privés"}
               description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."}
           />
         </motion.div>
-        <motion.div variants={itemVariants} className="mr-5 col-start-3 row-start-3">
+        <motion.div variants={itemVariants} className="mx-auto md:mr-5 md:col-start-3 md:row-start-3">
           <FeaturesCard
               icon={"/icons/Frame 1597880142.svg"}
               title={"Confidentialité intégrée"}

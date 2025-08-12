@@ -42,20 +42,20 @@ export const FeaturesHighlight = () => {
             whileInView="visible"
             viewport={{once: true, amount: 0.2}}
             variants={containerVariants}
-            className={"relative px-6 py-12 sm:px-10 sm:py-14 rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5] "}>
+            className={"relative px-4 py-10 sm:px-6 md:px-10 sm:py-12 md:py-14 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5] "}>
           {/* Positioning wrapper */}
           <div className="relative z-10 h-fit">
             {/* Left: content (takes left half on md+) */}
-            <div className="text-white space-y-6 md:w-2/3 md:pr-10">
+            <div className="text-white space-y-4 sm:space-y-6 md:w-2/3 md:pr-10">
               <motion.h2
                   variants={itemVariants}
-                  className="text-3xl sm:text-4xl font-extrabold leading-tight">
+                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
                 Organisez vos événements privés
               </motion.h2>
 
               <motion.p
                   variants={itemVariants}
-                  className="text-white/95 leading-relaxed max-w-2xl">
+                  className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed max-w-2xl">
                 Avec BOB, créez <strong className={"font-bold"}>des événements</strong> privés pour vos proches et
                 gérez
                 tout
@@ -117,7 +117,7 @@ export const FeaturesHighlight = () => {
                   alt="Aperçu mobile d'un événement privé"
                   width={1200}
                   height={800}
-                  className="w-full max-w-[520px] scale-125 h-auto object-contain drop-shadow-2xl"
+                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-110 sm:scale-125 h-auto object-contain drop-shadow-2xl"
                   priority
               />
             </motion.div>

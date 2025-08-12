@@ -11,7 +11,7 @@ export default function Hero() {
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
-          className="relative pt-28 pb-4 z-10"> {/* ↓ avant pt-48, donc badge + haut */}
+          className="relative pt-16 sm:pt-20 md:pt-28 pb-4 z-10"> {/* Responsive padding top */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
         <CircleBg/>
@@ -29,8 +29,9 @@ export default function Hero() {
               initial={{opacity: 0, y: -20}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.5, delay: 0.2}}
-              className="-mt-6 inline-flex items-center gap-2 rounded-full border border-accent px-4 py-2 text-sm text-accent">
-            Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
+              className="-mt-4 sm:-mt-6 inline-flex items-center gap-2 rounded-full border border-accent px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm text-accent">
+            <span className="hidden sm:inline">Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique</span>
+            <span className="sm:hidden">Usage privé • Sans transaction • Confidentiel</span>
           </motion.div>
 
           {/* Titre principal */}
@@ -38,7 +39,7 @@ export default function Hero() {
               initial={{opacity: 0, y: 20}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.6, delay: 0.4}}
-              className="mt-22 text-5xl tracking-tight sm:text-6xl leading-tight text-accent">
+              className="mt-6 sm:mt-10 md:mt-22 text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight text-accent">
           <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-bold">
             Bober
           </span>
@@ -50,7 +51,7 @@ export default function Hero() {
               initial={{opacity: 0, y: 20}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.6, delay: 0.6}}
-              className="mx-auto max-w-3xl text-lg text-accent leading-relaxed">
+              className="mx-auto max-w-3xl text-base sm:text-lg text-accent leading-relaxed px-4 sm:px-6 md:px-0">
             Gérez vos échanges d&#39;
             <strong className="text-accent">objets</strong>, de{" "}
             <strong className="text-accent">services</strong> et vos{" "}

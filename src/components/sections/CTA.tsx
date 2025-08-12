@@ -22,17 +22,17 @@ export const CTA = () => {
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true, amount: 0.2}}
             transition={{duration: 0.8}}
-            className="relative px-6 py-10 sm:px-10 sm:py-14 rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]">
+            className="relative px-4 py-8 sm:px-6 md:px-10 sm:py-10 md:py-14 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]">
           {/* Content + Image wrapper */}
           <div className="relative z-10 h-fit">
             {/* Left: content (takes left half on md+) */}
-            <div className="text-white space-y-6 md:w-1/2 md:pr-10">
+            <div className="text-white space-y-4 sm:space-y-6 md:w-1/2 md:pr-10">
               <motion.h2
                   initial={{opacity: 0, x: -20}}
                   whileInView={{opacity: 1, x: 0}}
                   viewport={{once: true}}
                   transition={{duration: 0.6, delay: 0.2}}
-                  className="text-3xl sm:text-5xl leading-tight">
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Commencer à bober dès maintenant !
               </motion.h2>
 
@@ -41,7 +41,7 @@ export const CTA = () => {
                   whileInView={{opacity: 1, x: 0}}
                   viewport={{once: true}}
                   transition={{duration: 0.6, delay: 0.3}}
-                  className="text-white/95 leading-relaxed max-w-2xl">
+                  className="text-sm sm:text-base text-white/95 leading-relaxed max-w-2xl">
                 Avec BOB, organiser vos échanges privés devient simple et bien
                 suivi. L'application est 100% gratuite, sans paiements ni
                 abonnements, et toutes les fonctionnalités sont incluses.
@@ -103,7 +103,7 @@ export const CTA = () => {
                   alt="Aperçu de l'application sur smartphone"
                   width={1200}
                   height={800}
-                  className="w-full max-w-[560px] h-auto object-contain drop-shadow-2xl scale-[130%]"
+                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[560px] h-auto object-contain drop-shadow-2xl scale-110 sm:scale-120 md:scale-[130%]"
                   priority
               />
             </motion.div>
