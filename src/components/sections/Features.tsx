@@ -9,7 +9,7 @@ export default function Features() {
               grid grid-cols-[1fr_1.6fr_1fr] grid-rows-3 gap-6
               items-center justify-items-stretch
               max-w-6xl mx-auto overflow-visible
-              !z-50 static
+              relative z-20
             "
       >
         {/* Left column (rows 1..3) */}

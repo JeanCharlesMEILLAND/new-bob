@@ -7,13 +7,13 @@ export default function Hero() {
       <section className="relative pt-28 pb-4 z-10"> {/* ↓ avant pt-48, donc badge + haut */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-5 block">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 block">
           <Image
               src="/circle.png"
               alt=""
               width={1800}
               height={1800}
-              className="h-screen scale-150 w-auto object-contain z-0 block"
+              className="h-screen scale-150 w-auto object-contain block"
           />
         </div>
 
