@@ -1,7 +1,6 @@
-// components/sections/Hero.tsx
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
-import Features from "@/components/sections/Features";
+import {WhiteGradient} from "@/components/WhiteGradient";
 
 export default function Hero() {
   return (
@@ -18,8 +17,7 @@ export default function Hero() {
           />
         </div>
 
-        <div
-            className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_70%_at_center,white_20%,transparent_70%)]"></div>
+        <WhiteGradient/>
 
         {/* Fonds décoratifs */}
         <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70"/>
