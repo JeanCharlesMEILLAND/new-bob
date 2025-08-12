@@ -84,7 +84,7 @@ export default function Features() {
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold">Fonctionnalités clés</h2>
           <p className="mt-3 text-white/80">
-            BOB structure les échanges privés entre proches — objets, services et événements.
+            BOB structure les échanges privés entre proches — objets, services et événements — sans finance ni annuaire public.
           </p>
         </div>
 
