@@ -20,7 +20,7 @@ export default function Events() {
               <li>• Liste mixte : <strong className="text-white">objets</strong> à apporter ou prêter</li>
               <li>• <strong className="text-white">Consommables</strong> à amener</li>
               <li>• <strong className="text-white">Services</strong> ponctuels pour aider</li>
-              <li>• Invitations ciblées : 5, 10 ou 20 contacts</li>
+              <li>• Invitations ciblées : 5, 10 ou 20 contacts maximum</li>
               <li>• Chat collectif pour coordonner tout le monde</li>
               <li>• <strong className="text-white">Positionnement en 1 clic</strong> → crée l’échange individuel + ajoute un rappel à l’agenda</li>
             </ul>

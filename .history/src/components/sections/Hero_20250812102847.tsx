@@ -4,7 +4,7 @@ import Container from '@/components/ui/Container'
 
 export default function Hero() {
   return (
-    <section className="relative pt-40 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
+    <section className="relative pt-36 pb-40"> {/* ↓ avant pt-48, donc badge + haut */}
       {/* Fonds décoratifs */}
       <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
       <div className="absolute inset-0 -z-20 bg-grid opacity-[0.25] [mask-image:radial-gradient(circle at center,black,transparent_70%)]" />

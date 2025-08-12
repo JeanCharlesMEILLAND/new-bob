@@ -80,7 +80,7 @@ export default function HowItWorks() {
             </p>
             <ul className="mt-4 space-y-1.5 text-white/75">
               <li>• Détails clairs (quoi, quand, consignes)</li>
-              <li>• Messagerie</li>
+              <li>• Envoi direct (SMS, messagerie)</li>
             </ul>
           </div>
 
@@ -90,7 +90,7 @@ export default function HowItWorks() {
               <h3 className="text-lg font-semibold">Confirmer & suivre</h3>
             </div>
             <p className="mt-3 text-white/75">
-              BOB crée l’échange et synchronise les statuts des deux côtés.
+              Un “OK” suffit. BOB crée l’échange et synchronise les statuts des deux côtés.
             </p>
             <ul className="mt-4 space-y-1.5 text-white/75">
               <li>• Suivi partagé</li>
@@ -120,6 +120,11 @@ export default function HowItWorks() {
             positionne en 1 clic (objets, consommables, services). Les rappels sont gérés automatiquement.
           </p>
         </div>
+
+        {/* Note conformité */}
+        <p className="mt-6 text-center text-sm text-white/60">
+          Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
+        </p>
       </Container>
     </section>
   )

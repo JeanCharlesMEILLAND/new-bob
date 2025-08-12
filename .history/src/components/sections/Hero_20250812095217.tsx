@@ -4,7 +4,7 @@ import Container from '@/components/ui/Container'
 
 export default function Hero() {
   return (
-    <section className="relative pt-40 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
+    <section className="relative pt-36 pb-40"> {/* ↓ avant pt-48, donc badge + haut */}
       {/* Fonds décoratifs */}
       <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
       <div className="absolute inset-0 -z-20 bg-grid opacity-[0.25] [mask-image:radial-gradient(circle at center,black,transparent_70%)]" />
@@ -24,7 +24,7 @@ export default function Hero() {
         <p className="mx-auto max-w-3xl text-lg text-white/80 leading-relaxed">
           Gérez vos échanges d’<strong className="text-white">objets</strong>, de{' '}
           <strong className="text-white">services</strong> et vos{' '}
-          <strong className="text-white">événements</strong>  — en toute simplicité et confidentialité,
+          <strong className="text-white">événements</strong> avec vos proches — en toute simplicité et confidentialité,
           uniquement avec vos contacts.
         </p>
 
@@ -51,6 +51,15 @@ export default function Hero() {
         {/* Légende rapprochée */}
         <p className="text-base text-white/60 -mt-2">Disponible sur iOS et Android</p>
 
+        {/* Visuel placeholder */}
+        <div
+          aria-hidden="true"
+          className="mx-auto mt-16 max-w-5xl rounded-2xl border border-white/10 bg-white/5 p-2 shadow-glow"
+        >
+          <div className="aspect-[16/9] w-full rounded-xl2 bg-black/40 ring-1 ring-white/10 flex items-center justify-center text-white/60">
+            <span className="text-sm">Aperçu — remplace par une capture de l’app (écran Événements recommandé)</span>
+          </div>
+        </div>
       </Container>
     </section>
   )

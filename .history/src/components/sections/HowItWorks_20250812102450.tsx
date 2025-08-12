@@ -120,6 +120,11 @@ export default function HowItWorks() {
             positionne en 1 clic (objets, consommables, services). Les rappels sont gérés automatiquement.
           </p>
         </div>
+
+        {/* Note conformité */}
+        <p className="mt-6 text-center text-sm text-white/60">
+          Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
+        </p>
       </Container>
     </section>
   )
