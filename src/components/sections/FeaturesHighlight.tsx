@@ -5,7 +5,7 @@ import {WhiteGradient} from "@/components/WhiteGradient";
 export const FeaturesHighlight = () => {
   return (
       <Container
-          className="mt-16 relative !z-50">
+          className="mt-16 relative" id="events">
         {/*<WhiteGradient/>*/}
         <div
             className={"relative px-6 py-12 sm:px-10 sm:py-14 rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5] "}>

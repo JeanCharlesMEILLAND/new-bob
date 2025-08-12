@@ -11,6 +11,7 @@ export default function Features() {
               max-w-6xl mx-auto overflow-visible
               relative z-20
             "
+          id={"features"}
       >
         {/* Left column (rows 1..3) */}
         <FeaturesCard
@@ -55,7 +56,7 @@ export default function Features() {
             description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."}
         />
         <FeaturesCard
-            className="m-5 col-start-3 row-start-3"
+            className="mr-5 col-start-3 row-start-3"
             icon={"/icons/Frame 1597880142.svg"}
             title={"Confidentialité intégrée"}
             description={"Aucune transaction financière. Aucune mise en relation publique. Historique personnel."}

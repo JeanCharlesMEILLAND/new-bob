@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import {useEffect, useState} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Container from './ui/Container'
-import { clsx } from 'clsx'
+import {clsx} from 'clsx'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -36,97 +36,141 @@ export default function Navbar() {
   }, [open])
 
   return (
-    <header
-      className={clsx(
-        'fixed inset-x-0 top-0 z-50 transition-all',
-        scrolled ? 'bg-black/50 backdrop-blur ' : 'bg-transparent'
-      )}
-    >
-      <Container className={clsx('flex items-center justify-between transition-all duration-300', scrolled ? 'py-6' : 'py-8')}>
-        {/* Logo + texte */}
-        <Link href="/" aria-label="Accueil" className="flex items-center gap-3">
-          <Image
-            src="/bob1.png"
-            alt="Logo BOB"
-            width={62}
-            height={62}
-            className=""
-            priority
-          />
-        <div className="flex flex-col leading-tight">
-            <span className="text-lg font-bold text-accent tracking-wide">Borrow and Back</span>
-          </div>
-        </Link>
-
-        {/* Nav desktop */}
-        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-7 text-sm text-accent/80">
-          <a href="#features" className="hover:text-accent">Fonctionnalités</a>
-          <a href="#how" className="hover:text-accent">Comment ça marche</a>
-          <a href="#events" className="hover:text-accent">Événements</a>
-          <a href="#privacy" className="hover:text-accent">Confidentialité</a>
-        </nav>
-
-        {/* Bouton menu mobile */}
-        <button
-          type="button"
-          className="md:hidden inline-flex items-center justify-center rounded-xl2 px-3 py-2 ring-1 ring-black/10 bg-black/5 text-accent/90"
-          aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
-          aria-controls={MENU_ID}
-          aria-expanded={open}
-          onClick={() => setOpen(v => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          <div className="space-y-1.5">
-            <span className="block h-0.5 w-5 bg-black/90" />
-            <span className="block h-0.5 w-5 bg-black/90" />
-            <span className="block h-0.5 w-5 bg-black/90" />
-          </div>
-        </button>
-      </Container>
-
-      {/* Overlay + panneau mobile */}
-      {/* Overlay sombre flouté pour lisibilité, sous la barre (z-40) */}
-      <div
-        className={clsx(
-          'md:hidden fixed inset-0 z-40 transition-opacity',
-          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        )}
-        onClick={() => setOpen(false)}
-        aria-hidden={!open}
-      >
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-sm" />
-      </div>
-
-      {/* Panneau du menu (sous la navbar), fond opaque pour lecture */}
-      <div
-        id={MENU_ID}
-        className={clsx(
-          'md:hidden fixed inset-x-0 top-0 z-50 pt-20', // pt-20 pour laisser la navbar visible
-          open ? 'pointer-events-auto' : 'pointer-events-none'
-        )}
-      >
-        <div
+      <header
           className={clsx(
-            'mx-4 rounded-2xl bg-neutral-900/95 ring-1 ring-white/10 shadow-lg transition-[max-height] duration-300 ease-out overflow-hidden',
-            open ? 'max-h-96' : 'max-h-0'
+              'fixed inset-x-0 top-0 block z-50 transition-all',
+              scrolled ? 'bg-black/50 backdrop-blur ' : 'bg-transparent'
           )}
-        >
-          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-accent/90">
-            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+      >
+        <Container
+            className={clsx('flex items-center justify-between transition-all duration-300', scrolled ? 'py-6' : 'py-8')}>
+          {/* Logo + texte */}
+          <Link href="/" aria-label="Accueil" className="flex items-center gap-3">
+            <Image
+                src="/bob1.png"
+                alt="Logo BOB"
+                width={62}
+                height={62}
+                className=""
+                priority
+            />
+            <div className="flex flex-col leading-tight">
+              <span className={clsx(
+                  "text-lg font-bold tracking-wide transition-colors",
+                  scrolled ? "text-white" : "text-accent"
+              )}>
+                Borrow and Back
+              </span>
+            </div>
+          </Link>
+
+          {/* Nav desktop */}
+          <nav aria-label="Navigation principale" className={clsx(
+              "hidden md:flex items-center gap-7 text-sm transition-colors",
+              scrolled ? "text-white/80" : "text-accent/80"
+          )}>
+            <a href="#features" className={clsx(
+                "transition-colors",
+                scrolled ? "hover:text-white" : "hover:text-accent"
+            )}>
               Fonctionnalités
             </a>
-            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
-              Comment ça marche
-            </a>
-            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+            <a href="#events" className={clsx(
+                "transition-colors",
+                scrolled ? "hover:text-white" : "hover:text-accent"
+            )}>
               Événements
             </a>
-            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+            <a href="#testimonials" className={clsx(
+                "transition-colors",
+                scrolled ? "hover:text-white" : "hover:text-accent"
+            )}>
+              Témoignages
+            </a>
+            <a href="#privacy" className={clsx(
+                "transition-colors",
+                scrolled ? "hover:text-white" : "hover:text-accent"
+            )}>
               Confidentialité
             </a>
           </nav>
+
+          {/* Bouton menu mobile */}
+          <button
+              type="button"
+              className={clsx(
+                  "md:hidden inline-flex items-center justify-center rounded-xl2 px-3 py-2 ring-1 transition-colors",
+                  scrolled
+                      ? "ring-white/20 bg-white/10 text-white"
+                      : "ring-black/10 bg-black/5 text-accent/90"
+              )}
+              aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-controls={MENU_ID}
+              aria-expanded={open}
+              onClick={() => setOpen(v => !v)}
+          >
+            <span className="sr-only">Menu</span>
+            <div className="space-y-1.5">
+              <span className={clsx(
+                  "block h-0.5 w-5 transition-colors",
+                  scrolled ? "bg-white" : "bg-black/90"
+              )}/>
+              <span className={clsx(
+                  "block h-0.5 w-5 transition-colors",
+                  scrolled ? "bg-white" : "bg-black/90"
+              )}/>
+              <span className={clsx(
+                  "block h-0.5 w-5 transition-colors",
+                  scrolled ? "bg-white" : "bg-black/90"
+              )}/>
+            </div>
+          </button>
+        </Container>
+
+        {/* Overlay + panneau mobile */}
+        {/* Overlay sombre flouté pour lisibilité, sous la barre (z-40) */}
+        <div
+            className={clsx(
+                'md:hidden fixed inset-0 z-40 transition-opacity',
+                open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+            )}
+            onClick={() => setOpen(false)}
+            aria-hidden={!open}
+        >
+          <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"/>
         </div>
-      </div>
-    </header>
+
+        {/* Panneau du menu (sous la navbar), fond opaque pour lecture */}
+        <div
+            id={MENU_ID}
+            className={clsx(
+                'md:hidden fixed inset-x-0 top-0 z-50 pt-20', // pt-20 pour laisser la navbar visible
+                open ? 'pointer-events-auto' : 'pointer-events-none'
+            )}
+        >
+          <div
+              className={clsx(
+                  'mx-4 rounded-2xl bg-neutral-900/95 ring-1 ring-white/10 shadow-lg transition-[max-height] duration-300 ease-out overflow-hidden',
+                  open ? 'max-h-96' : 'max-h-0'
+              )}
+          >
+            <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-accent/90">
+              <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+                Fonctionnalités
+              </a>
+              <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+                Événements
+              </a>
+              <a href="#témoignages" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+                Témoignages
+              </a>
+
+              <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-black/5">
+                Confidentialité
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
   )
 }

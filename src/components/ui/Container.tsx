@@ -1,11 +1,13 @@
 import clsx from "clsx"
 
 export default function Container({
-  children,
-  className
-}: {
+                                    children,
+                                    className,
+                                    id
+                                  }: {
   children: React.ReactNode
   className?: string
+  id?: string
 }) {
-  return <div className={clsx('container-gutter', className)}>{children}</div>
+  return <div id={id} className={clsx('container-gutter', className)}>{children}</div>
 }

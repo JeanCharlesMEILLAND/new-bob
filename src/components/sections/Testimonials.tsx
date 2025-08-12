@@ -33,7 +33,7 @@ export default function Testimonials() {
 
           <ItemSwiper className="mt-8 ">
             {TESTIMONIALS.map((t, index) => (
-                <div className={" cursor-grab bg-white p-8 rounded-2xl space-y-5 min-w-sm"} key={index}>
+                <div className={" cursor-grab bg-white p-8 rounded-2xl space-y-5 w-full"} key={index}>
                   <Image
                       src="/el_quote-alt.svg"
                       alt="Décor graphique"
