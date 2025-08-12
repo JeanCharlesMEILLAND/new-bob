@@ -18,22 +18,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Ferme au resize et gère le scroll lock quand le menu est ouvert
   useEffect(() => {
     const close = () => setOpen(false)
     window.addEventListener('resize', close)
     return () => window.removeEventListener('resize', close)
   }, [])
-
-  useEffect(() => {
-    if (open) {
-      const prev = document.body.style.overflow
-      document.body.style.overflow = 'hidden'
-      return () => {
-        document.body.style.overflow = prev
-      }
-    }
-  }, [open])
 
   return (
     <header
@@ -53,8 +42,9 @@ export default function Navbar() {
             className="rounded-lg ring-1 ring-white/10"
             priority
           />
-        <div className="flex flex-col leading-tight">
-            <span className="text-lg font-bold text-white tracking-wide">Borrow and Back</span>
+          <div className="flex flex-col leading-tight">
+            <span className="text-lg font-bold text-white tracking-wide">BOB</span>
+            <span className="text-[11px] uppercase tracking-[1.5px] text-white/70">Borrow and Back</span>
           </div>
         </Link>
 
@@ -84,44 +74,26 @@ export default function Navbar() {
         </button>
       </Container>
 
-      {/* Overlay + panneau mobile */}
-      {/* Overlay sombre flouté pour lisibilité, sous la barre (z-40) */}
-      <div
-        className={clsx(
-          'md:hidden fixed inset-0 z-40 transition-opacity',
-          open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        )}
-        onClick={() => setOpen(false)}
-        aria-hidden={!open}
-      >
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-      </div>
-
-      {/* Panneau du menu (sous la navbar), fond opaque pour lecture */}
+      {/* Menu mobile */}
       <div
         id={MENU_ID}
         className={clsx(
-          'md:hidden fixed inset-x-0 top-0 z-50 pt-20', // pt-20 pour laisser la navbar visible
-          open ? 'pointer-events-auto' : 'pointer-events-none'
+          'md:hidden overflow-hidden transition-[max-height] duration-300 ease-out',
+          open ? 'max-h-96' : 'max-h-0'
         )}
       >
-        <div
-          className={clsx(
-            'mx-4 rounded-2xl bg-neutral-900/95 ring-1 ring-white/10 shadow-lg transition-[max-height] duration-300 ease-out overflow-hidden',
-            open ? 'max-h-96' : 'max-h-0'
-          )}
-        >
-          <nav aria-label="Navigation mobile" className="flex flex-col gap-1 p-2 text-sm text-white/90">
-            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
+        <div className="container-px pb-4 pt-1">
+          <nav aria-label="Navigation mobile" className="flex flex-col gap-2 text-sm text-white/90">
+            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
               Fonctionnalités
             </a>
-            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
+            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
               Comment ça marche
             </a>
-            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
+            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
               Événements
             </a>
-            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 hover:bg-white/5">
+            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
               Confidentialité
             </a>
           </nav>

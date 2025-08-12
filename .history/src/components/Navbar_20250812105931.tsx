@@ -54,7 +54,8 @@ export default function Navbar() {
             priority
           />
         <div className="flex flex-col leading-tight">
-            <span className="text-lg font-bold text-white tracking-wide">Borrow and Back</span>
+            <span className="text-lg font-bold text-white tracking-wide">BOB</span>
+            <span className="text-[11px] uppercase tracking-[1.5px] text-white/70">Borrow and Back</span>
           </div>
         </Link>
 
