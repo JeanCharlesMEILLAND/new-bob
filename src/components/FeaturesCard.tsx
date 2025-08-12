@@ -20,14 +20,14 @@ export const FeaturesCard = ({
         <Image
             src={icon}
             alt=""
-            width={24}
-            height={24}
+            width={20}
+            height={20}
             className="text-white h-12 w-12"
         />
 
         {/* Content */}
-        <div className="space-y-3 flex-1">
-          <h3 className=" font-semibold text-gray-900 text-left">
+        <div className="space-y-1 flex-1">
+          <h3 className=" text-sm font-semibold text-gray-900 text-left">
             {title}
           </h3>
 
