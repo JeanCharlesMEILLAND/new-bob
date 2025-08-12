@@ -31,9 +31,9 @@ export default function Testimonials() {
         <Container>
           <h2 className="text-5xl text-accent text-center">Ils en parlent</h2>
 
-          <ItemSwiper className="mt-8 cursor-grab">
+          <ItemSwiper className="mt-8 ">
             {TESTIMONIALS.map((t, index) => (
-                <div className={"bg-white p-8 rounded-2xl space-y-5 min-w-sm"} key={index}>
+                <div className={" cursor-grab bg-white p-8 rounded-2xl space-y-5 min-w-sm"} key={index}>
                   <Image
                       src="/el_quote-alt.svg"
                       alt="Décor graphique"
