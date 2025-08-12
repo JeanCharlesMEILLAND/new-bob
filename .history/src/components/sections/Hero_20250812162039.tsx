@@ -55,7 +55,7 @@ export default function Hero() {
          {/* Visuel placeholder */}
           <div className='flex justify-center mt-10'>
 
-              <Image src="/central.png" alt="Aperçu de l’événement" width={700} height={800} className="" />
+              <Image src="/central2.png" alt="Aperçu de l’événement" width={1000} height={800} className="" />
 
           </div>
        
