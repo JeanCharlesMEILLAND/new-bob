@@ -17,7 +17,7 @@ export default function Hero() {
 
         {/* Titre principal */}
         <h1 className="mt-22 text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
-          <span className="text-gradient from-[#0F55C5] to-[#468BFF]">Bober</span>, c’est partager, aider, organiser…
+          <span className="">Bober</span>, c’est partager, aider, organiser…
         </h1>
 
         {/* Sous-titre */}
@@ -53,10 +53,10 @@ export default function Hero() {
 
 
          {/* Visuel placeholder */}
-          <div className='flex justify-center mt-10'>
-
-              <Image src="/central.png" alt="Aperçu de l’événement" width={600} height={400} className="" />
-
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-3 shadow-glow">
+            
+              <Image src="/central.png" alt="Aperçu de l’événement" width={400} height={300} />
+          
           </div>
        
 

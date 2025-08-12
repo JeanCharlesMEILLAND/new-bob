@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #121318;
+  --bg: #0b1020;
   --fg: #ffffff;
 }
 
@@ -46,7 +46,7 @@ html, body {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #0F55C5 0%, #22c55e 100%);
+  background: linear-gradient(90deg, #4b7bff 0%, #22c55e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

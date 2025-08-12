@@ -17,7 +17,7 @@ export default function Hero() {
 
         {/* Titre principal */}
         <h1 className="mt-22 text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
-          <span className="text-gradient from-[#0F55C5] to-[#468BFF]">Bober</span>, c’est partager, aider, organiser…
+          <span className="gradient-text drop-shadow-[0_0_15px_rgba(75,123,255,0.6)]">Bober</span>, c’est partager, aider, organiser…
         </h1>
 
         {/* Sous-titre */}

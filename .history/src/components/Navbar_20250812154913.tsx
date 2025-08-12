@@ -48,8 +48,8 @@ export default function Navbar() {
           <Image
             src="/bob1.png"
             alt="Logo BOB"
-            width={62}
-            height={62}
+            width={48}
+            height={48}
             className=""
             priority
           />

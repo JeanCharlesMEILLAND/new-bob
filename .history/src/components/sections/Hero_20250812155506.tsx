@@ -16,8 +16,8 @@ export default function Hero() {
         </div>
 
         {/* Titre principal */}
-        <h1 className="mt-22 text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
-          <span className="text-gradient from-[#0F55C5] to-[#468BFF]">Bober</span>, c’est partager, aider, organiser…
+        <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
+          <span className="">Bober</span>, c’est partager, aider, organiser…
         </h1>
 
         {/* Sous-titre */}
@@ -50,15 +50,6 @@ export default function Hero() {
 
         {/* Légende rapprochée */}
         <p className="text-base text-white/60 -mt-2">Disponible sur iOS et Android</p>
-
-
-         {/* Visuel placeholder */}
-          <div className='flex justify-center mt-10'>
-
-              <Image src="/central.png" alt="Aperçu de l’événement" width={600} height={400} className="" />
-
-          </div>
-       
 
       </Container>
     </section>

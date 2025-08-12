@@ -4,20 +4,20 @@ import Container from '@/components/ui/Container'
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
+    <section className="relative pt-40 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
       {/* Fonds décoratifs */}
       <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
       <div className="absolute inset-0 -z-20 bg-grid opacity-[0.25] [mask-image:radial-gradient(circle at center,black,transparent_70%)]" />
 
-      <Container className="text-center  space-y-10">
+      <Container className="text-center space-y-10">
         {/* Badge conformité */}
         <div className="-mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
           Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
         </div>
 
         {/* Titre principal */}
-        <h1 className="mt-22 text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
-          <span className="text-gradient from-[#0F55C5] to-[#468BFF]">Bober</span>, c’est partager, aider, organiser…
+        <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight">
+          <span className="">Bober</span>, c’est partager, aider, organiser…
         </h1>
 
         {/* Sous-titre */}
@@ -50,15 +50,6 @@ export default function Hero() {
 
         {/* Légende rapprochée */}
         <p className="text-base text-white/60 -mt-2">Disponible sur iOS et Android</p>
-
-
-         {/* Visuel placeholder */}
-          <div className='flex justify-center mt-10'>
-
-              <Image src="/central.png" alt="Aperçu de l’événement" width={600} height={400} className="" />
-
-          </div>
-       
 
       </Container>
     </section>

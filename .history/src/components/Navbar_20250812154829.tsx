@@ -48,9 +48,9 @@ export default function Navbar() {
           <Image
             src="/bob1.png"
             alt="Logo BOB"
-            width={62}
-            height={62}
-            className=""
+            width={48}
+            height={48}
+            className="rounded-lg ring-1 ring-white/10"
             priority
           />
         <div className="flex flex-col leading-tight">
