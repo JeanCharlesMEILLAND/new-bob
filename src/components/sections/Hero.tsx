@@ -1,6 +1,7 @@
 // components/sections/Hero.tsx
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
+import {FeaturesCard} from "@/components/FeaturesCard";
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_100%_60%_at_center,white_20%,transparent_70%)]"></div>
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_70%_at_center,white_20%,transparent_70%)]"></div>
 
         {/* Fonds décoratifs */}
         <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
@@ -65,11 +66,18 @@ export default function Hero() {
             </a>
           </div>
 
-
-
-          {/* Visuel placeholder */}
-          <div className='flex justify-center mt-10'>
-            <Image src="/central.png" alt="Aperçu de l'événement" width={600} height={400} className="" />
+          <div className='flex justify-center items-center mt-10'>
+            <div className={"flex flex-col flex-1 gap-8 justify-center"}>
+              <FeaturesCard className={"ml-5"} icon={"/icons/Entre proches.svg"} title={"Entre proches uniquement"} description={"Fonctionne avec les contacts de votre téléphone. Pas d’annuaire public, pas d’inconnus."} />
+              <FeaturesCard className={"mr-5"} icon={"/icons/Frame 1597880141.svg"} title={"Messagerie intégrée"} description={"Discutez en tête-à-tête pour vos échanges ou utilisez le chat d’événement pour coordonner un groupe."} />
+              <FeaturesCard className={"ml-5"} icon={"/icons/Frame 1597880138.svg"} title={"Échanges d’objets & services"} description={"Proposez ou demandez en privé : un geste, une confirmation… et l’échange est suivi automatiquement."} />
+            </div>
+            <Image src="/central.png" alt="Aperçu de l'événement"  width={400} height={400} className="flex-1" />
+            <div className={"flex flex-col flex-1 gap-8 justify-center"}>
+              <FeaturesCard className={"mr-5"} icon={"/icons/Entre proches.svg"} title={"Rappels & agenda"} description={"Rappels automatiques des deux côtés et ajout à l’agenda pour éviter les oublis."} />
+              <FeaturesCard className={"ml-5"} icon={"/icons/Entre proches.svg"} title={"Événements privés"} description={"Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."} />
+              <FeaturesCard className={"m-5"} icon={"/icons/Entre proches.svg"} title={"Confidentialité intégrée"} description={"Aucune transaction financière. Aucune mise en relation publique. Historique personnel."} />
+            </div>
           </div>
 
         </Container>
