@@ -11,7 +11,7 @@ export default function Hero() {
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
-          className="relative pt-16 sm:pt-20 md:pt-28 pb-4 z-10"> {/* Responsive padding top */}
+          className="relative pt-32 sm:pt-20 md:pt-28 pb-4 z-10 p"> {/* Responsive padding top */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
         <CircleBg/>
