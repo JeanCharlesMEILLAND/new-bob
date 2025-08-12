@@ -27,9 +27,9 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-      <section id="testimonials" className="section pt-12 md:pt-16">
+      <section id="testimonials" className="">
         <Container>
-          <h2 className="text-3xl font-bold">Ils en parlent</h2>
+          <h2 className="text-5xl text-accent text-center">Ils en parlent</h2>
 
           <ItemSwiper className="mt-8 cursor-grab">
             {TESTIMONIALS.map((t, index) => (

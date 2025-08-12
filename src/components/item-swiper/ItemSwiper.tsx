@@ -29,6 +29,7 @@ const ItemSwiper: React.FC<ItemSwiperProps> = ({children, className}) => {
 
   return (
       <div className="relative">
+        <div className={"absolute top-0 left-0 h-full w-28 bg-gradient-to-r from-primary to-transparent z-20"}></div>
         <Swiper
             slidesPerView={1}
             spaceBetween={40}
@@ -63,6 +64,7 @@ const ItemSwiper: React.FC<ItemSwiperProps> = ({children, className}) => {
                 <div className="h-full w-full">{child}</div>
               </SwiperSlide>
           ))}
+          <div className={"absolute top-0 right-0 h-full w-28 bg-gradient-to-l from-primary to-transparent z-20"}></div>
         </Swiper>
       </div>
   );

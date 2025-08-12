@@ -27,7 +27,8 @@ html, body {
     --color-brand-800: #1f3ca0;
     --color-brand-900: #0F55C5;
 
-    --color-accent : #25416E;
+    --color-primary: #EDF3FF;
+    --color-accent: #25416E;
 
     /* Radius */
     --radius-xl2: 1.25rem; /* => rounded-xl2 */
@@ -68,15 +69,32 @@ html, body {
 
 /* --- Floating cards animation --- */
 @keyframes bob-float {
-  0% { transform: translateY(0) }
-  50% { transform: translateY(-6px) }
-  100% { transform: translateY(0) }
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-6px)
+    }
+    100% {
+        transform: translateY(0)
+    }
 }
-.animate-bob { animation: bob-float 6s ease-in-out infinite }
-.animate-bob-slow { animation: bob-float 7.5s ease-in-out infinite }
-.animate-bob-slower { animation: bob-float 9s ease-in-out infinite }
+
+.animate-bob {
+    animation: bob-float 6s ease-in-out infinite
+}
+
+.animate-bob-slow {
+    animation: bob-float 7.5s ease-in-out infinite
+}
+
+.animate-bob-slower {
+    animation: bob-float 9s ease-in-out infinite
+}
 
 /* optionnel : pause du flottement au survol, pour renforcer l'effet hover */
 .animate-bob:hover,
 .animate-bob-slow:hover,
-.animate-bob-slower:hover { animation-play-state: paused }
+.animate-bob-slower:hover {
+    animation-play-state: paused
+}
