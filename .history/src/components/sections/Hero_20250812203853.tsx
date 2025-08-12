@@ -1,6 +1,7 @@
 // components/sections/Hero.tsx
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
+import {FeaturesCard} from "@/components/FeaturesCard";
 import Features from "@/components/sections/Features";
 
 export default function Hero() {
@@ -70,6 +71,7 @@ export default function Hero() {
               <Image src="/app-badges/playstore.svg" alt="Disponible sur Google Play" width={190} height={54} priority/>
             </a>
           </div>
+          <Features/>
         </Container>
       </section>
   )

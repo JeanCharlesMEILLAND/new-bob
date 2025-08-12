@@ -8,16 +8,16 @@ export default function Features() {
       <div
         className="
           relative
-          mx-auto max-w-7xl
-          grid grid-cols-1 gap-8
-          md:grid-cols-[1.2fr_1.6fr_1.2fr] md:grid-rows-3
+          mx-auto max-w-6xl
+          grid grid-cols-1 gap-6
+          md:grid-cols-[1fr_1.6fr_1fr] md:grid-rows-3
           items-center
         "
       >
         {/* Colonne gauche */}
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-1 md:row-start-1",
+            "md:col-start-1 md:row-start-1 md:ml-5",
             "animate-bob",
             "md:-translate-y-2"
           )}
@@ -28,7 +28,7 @@ export default function Features() {
 
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-1 md:row-start-2",
+            "md:col-start-1 md:row-start-2 md:mr-5",
             "animate-bob-slow",
             "md:translate-y-3"
           )}
@@ -39,7 +39,7 @@ export default function Features() {
 
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-1 md:row-start-3",
+            "md:col-start-1 md:row-start-3 md:ml-5",
             "animate-bob-slower",
             "md:-translate-y-1"
           )}
@@ -55,7 +55,7 @@ export default function Features() {
             alt="Aperçu de l'application"
             width={700}
             height={700}
-            className="w-full max-w-[600px] h-auto object-contain md:scale-110"
+            className="w-full h-auto object-contain md:scale-110"
             priority
           />
         </div>
@@ -63,7 +63,7 @@ export default function Features() {
         {/* Colonne droite */}
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-3 md:row-start-1",
+            "md:col-start-3 md:row-start-1 md:mr-5",
             "animate-bob-slower",
             "md:-translate-y-3"
           )}
@@ -74,7 +74,7 @@ export default function Features() {
 
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-3 md:row-start-2",
+            "md:col-start-3 md:row-start-2 md:ml-5",
             "animate-bob",
             "md:translate-y-2"
           )}
@@ -85,7 +85,7 @@ export default function Features() {
 
         <FeaturesCard
           wrapperClassName={clsx(
-            "md:col-start-3 md:row-start-3",
+            "md:col-start-3 md:row-start-3 md:m-5",
             "animate-bob-slow",
             "md:-translate-y-1"
           )}

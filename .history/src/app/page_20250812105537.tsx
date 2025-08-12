@@ -8,9 +8,9 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <Features />
       <HowItWorks />
       <Events />
+      <Features />
       <Testimonials />
     </>
   )

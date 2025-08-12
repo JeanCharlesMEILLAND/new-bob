@@ -68,15 +68,20 @@ html, body {
 
 /* --- Floating cards animation --- */
 @keyframes bob-float {
-  0% { transform: translateY(0) }
-  50% { transform: translateY(-6px) }
+  0%   { transform: translateY(0) }
+  50%  { transform: translateY(-6px) }
   100% { transform: translateY(0) }
 }
-.animate-bob { animation: bob-float 6s ease-in-out infinite }
-.animate-bob-slow { animation: bob-float 7.5s ease-in-out infinite }
-.animate-bob-slower { animation: bob-float 9s ease-in-out infinite }
-
-/* optionnel : pause du flottement au survol, pour renforcer l'effet hover */
-.animate-bob:hover,
-.animate-bob-slow:hover,
-.animate-bob-slower:hover { animation-play-state: paused }
+.animate-bob {
+  animation: bob-float 6s ease-in-out infinite;
+}
+.animate-bob-slow {
+  animation: bob-float 7.5s ease-in-out infinite;
+}
+.animate-bob-slower {
+  animation: bob-float 9s ease-in-out infinite;
+}
+/* facultatif: léger lift au survol */
+.lift:hover {
+  transform: translateY(-4px);
+}
