@@ -1,4 +1,4 @@
-// tailwind.config.js
+// tailwind.config.ts
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"], // adapte si besoin
   theme: {

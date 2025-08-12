@@ -34,7 +34,7 @@ a:hover { color: #1d4ed8; } /* blue-700 */
 }
 .card:hover { @apply shadow-xl-soft; transform: translateY(-2px) scale(1.01); }
 
-/* Ombres premium supplémentaires (générées via tailwind.config.js) */
+/* Ombres premium supplémentaires (générées via tailwind.config.ts) */
 /* .shadow-soft et .shadow-xl-soft sont maintenant de vraies utilities */
 
 /* ================================

@@ -40,7 +40,7 @@ a:hover { color: #1d4ed8; } /* blue-700 */
 
 /* ================================
    Boutons (palette brand/accent)
-   -> nécessite tailwind.config.js avec:
+   -> nécessite tailwind.config.ts avec:
    colors: { brand:{DEFAULT:'#4f46e5',dark:'#3730a3'}, accent:{DEFAULT:'#9333ea'} }
 =================================== */
 .btn-base {
