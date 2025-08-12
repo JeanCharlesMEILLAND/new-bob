@@ -4,6 +4,17 @@ import Container from "@/components/ui/Container";
 export const CTA = () => {
   return (
       <Container className="mt-16 relative !z-50">
+        {/* Custom background for CTA - properly sized */}
+        <div className="absolute inset-0 flex items-center justify-center -z-10 overflow-hidden rounded-3xl">
+          <Image
+              src="/circle.png"
+              alt=""
+              width={800}
+              height={800}
+              className="w-auto h-auto object-contain opacity-20 scale-110"
+          />
+        </div>
+
         <div
             className="relative px-6 py-10 sm:px-10 sm:py-14 rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]">
           {/* Content + Image wrapper */}
@@ -16,7 +27,7 @@ export const CTA = () => {
 
               <p className="text-white/95 leading-relaxed max-w-2xl">
                 Avec BOB, organiser vos échanges privés devient simple et bien
-                suivi. L’application est 100% gratuite, sans paiements ni
+                suivi. L'application est 100% gratuite, sans paiements ni
                 abonnements, et toutes les fonctionnalités sont incluses.
               </p>
 
@@ -60,7 +71,7 @@ export const CTA = () => {
                 className="mt-8 md:mt-0 md:absolute md:-bottom-2 md:inset-y-0 md:right-0 md:w-1/2 flex items-center justify-center">
               <Image
                   src="/Group%201000001285%20(1).png"
-                  alt="Aperçu de l’application sur smartphone"
+                  alt="Aperçu de l'application sur smartphone"
                   width={1200}
                   height={800}
                   className="w-full max-w-[560px] h-auto object-contain drop-shadow-2xl scale-[130%]"

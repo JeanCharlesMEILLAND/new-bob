@@ -1,21 +1,14 @@
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import {WhiteGradient} from "@/components/WhiteGradient";
+import {CircleBg} from "@/components/CircleBg";
 
 export default function Hero() {
   return (
       <section className="relative pt-28 pb-4 z-10"> {/* ↓ avant pt-48, donc badge + haut */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 block">
-          <Image
-              src="/circle.png"
-              alt=""
-              width={1800}
-              height={1800}
-              className="h-screen scale-150 w-auto object-contain block"
-          />
-        </div>
+        <CircleBg/>
 
         <WhiteGradient/>
 
@@ -33,7 +26,7 @@ export default function Hero() {
 
           {/* Titre principal */}
           <h1 className="mt-22 text-5xl tracking-tight sm:text-6xl leading-tight text-accent">
-          <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-extrabold">
+          <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-bold">
             Bober
           </span>
             , c&#39;est partager, aider, organiser…
