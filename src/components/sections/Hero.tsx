@@ -7,15 +7,17 @@ export default function Hero() {
       <section className="relative pt-28 pb-4"> {/* ↓ avant pt-48, donc badge + haut */}
 
         {/* Hero background image - absolute positioned on right, vertically centered */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 block">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-5 block">
           <Image
-              src="/circle.svg"
+              src="/circle.png"
               alt=""
-              width={1000}
-              height={1000}
-              className="h-screen w-auto object-contain"
+              width={1800}
+              height={1800}
+              className="h-screen scale-150 w-auto object-contain"
           />
         </div>
+
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_100%_60%_at_center,white_20%,transparent_70%)]"></div>
 
         {/* Fonds décoratifs */}
         <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
@@ -28,8 +30,8 @@ export default function Hero() {
           </div>
 
           {/* Titre principal */}
-          <h1 className="mt-22 text-5xl font-extrabold tracking-tight sm:text-6xl leading-tight text-accent">
-            <span className="bg-gradient-to-tr from-[#0F55C5] to-[#468BFF] bg-clip-text text-transparent">Bober</span>, c&#39;est partager, aider, organiser…
+          <h1 className="mt-22 text-5xl tracking-tight sm:text-6xl leading-tight text-accent">
+            <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-extrabold">Bober</span>, c&#39;est partager, aider, organiser…
           </h1>
 
           {/* Sous-titre */}
