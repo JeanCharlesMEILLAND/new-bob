@@ -44,61 +44,32 @@ export default function Navbar() {
           />
           <div className="flex flex-col leading-tight">
             <span className="text-lg font-bold text-white tracking-wide">BOB</span>
-            <span className="text-[11px] uppercase tracking-[1.5px] text-white/70">Borrow and Back</span>
+            <span className="text-[11px] uppercase tracking-[1.5px] text-white/70">
+              Borrow and Back
+            </span>
           </div>
         </Link>
 
         {/* Nav desktop */}
-        <nav aria-label="Navigation principale" className="hidden md:flex items-center gap-7 text-sm text-white/80">
+        <nav
+          aria-label="Navigation principale"
+          className="hidden md:flex items-center gap-7 text-sm text-white/80"
+        >
           <a href="#features" className="hover:text-white">Fonctionnalités</a>
           <a href="#how" className="hover:text-white">Comment ça marche</a>
           <a href="#events" className="hover:text-white">Événements</a>
           <a href="#privacy" className="hover:text-white">Confidentialité</a>
         </nav>
 
-        {/* Bouton menu mobile */}
+        {/* Menu mobile */}
         <button
           type="button"
           className="md:hidden inline-flex items-center justify-center rounded-xl2 px-3 py-2 ring-1 ring-white/10 bg-white/5 text-white/90"
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-haspopup="menu"
           aria-controls={MENU_ID}
           aria-expanded={open}
-          onClick={() => setOpen(v => !v)}
+          onClick={() => setOpen(!open)}
         >
-          <span className="sr-only">Menu</span>
           <div className="space-y-1.5">
-            <span className="block h-0.5 w-5 bg-white/90" />
-            <span className="block h-0.5 w-5 bg-white/90" />
-            <span className="block h-0.5 w-5 bg-white/90" />
-          </div>
-        </button>
-      </Container>
-
-      {/* Menu mobile */}
-      <div
-        id={MENU_ID}
-        className={clsx(
-          'md:hidden overflow-hidden transition-[max-height] duration-300 ease-out',
-          open ? 'max-h-96' : 'max-h-0'
-        )}
-      >
-        <div className="container-px pb-4 pt-1">
-          <nav aria-label="Navigation mobile" className="flex flex-col gap-2 text-sm text-white/90">
-            <a href="#features" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
-              Fonctionnalités
-            </a>
-            <a href="#how" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
-              Comment ça marche
-            </a>
-            <a href="#events" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
-              Événements
-            </a>
-            <a href="#privacy" onClick={() => setOpen(false)} className="rounded-lg px-3 py-2 hover:bg-white/5">
-              Confidentialité
-            </a>
-          </nav>
-        </div>
-      </div>
-    </header>
-  )
-}
+            <span classN
