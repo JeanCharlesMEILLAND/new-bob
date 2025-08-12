@@ -7,13 +7,13 @@ import {FeaturesHighlight} from "@/components/sections/FeaturesHighlight";
 
 export default function Page() {
   return (
-    <>
-      <Hero />
-      <Features />
-      <FeaturesHighlight/>
-      <HowItWorks />
-      <Events />
-      <Testimonials />
-    </>
+      <>
+        <Hero/>
+        <Features/>
+        <FeaturesHighlight/>
+        <Testimonials/>
+        <HowItWorks/>
+        <Events/>
+      </>
   )
 }
