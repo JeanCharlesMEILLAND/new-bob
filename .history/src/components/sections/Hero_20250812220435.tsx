@@ -17,7 +17,7 @@ export default function Hero() {
           />
         </div>
 
-        <WhiteGradient/>
+        
 
         {/* Fonds décoratifs */}
         <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70"/>
@@ -59,7 +59,7 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-5 pt-4"
         >
           <a
-            href="https://apps.apple.com/app/id6743935044"
+            href="https://apps.apple.com/app/idXXXXXXXXX"
             aria-label="Télécharger BOB sur l'App Store"
             className="inline-flex"
             target="_blank"
