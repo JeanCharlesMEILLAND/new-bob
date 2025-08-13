@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Analytics from '@/components/Analytics'
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
+import ClientProviders from '@/components/ClientProviders' // 👈 ajoute ceci
 
 const name = process.env.NEXT_PUBLIC_SITE_NAME || 'BOB'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://new-bob.vercel.app'
@@ -46,32 +47,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="relative min-h-screen bg-gradient-to-r from-primary via-white to-primary text-[--fg] antialiased overflow-x-hidden">
-        <div className="relative z-10">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <Analytics />
-        </div>
-
-        {/* Image décorative optimisée */}
-        <Container className="absolute inset-x-0 bottom-0 z-0">
-          <div className="relative w-full overflow-hidden">
-            <Image
-              src="/circle-bg.webp" // Image optimisée en WebP
-              alt=""
-              width={800}
-              height={800}
-              className="w-full object-cover object-top"
-              style={{
-                height: '110vh',
-                minHeight: '800px',
-                transform: 'translateY(30%)',
-              }}
-              loading="lazy"
-              decoding="async"
-            />
+        <ClientProviders>
+          <div className="relative z-10">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <Analytics />
           </div>
-        </Container>
+
+          {/* Image décorative optimisée */}
+          <Container className="absolute inset-x-0 bottom-0 z-0">
+            <div className="relative w-full overflow-hidden">
+              <Image
+                src="/circle-bg.webp"
+                alt=""
+                width={800}
+                height={800}
+                className="w-full object-cover object-top"
+                style={{ height: '110vh', minHeight: '800px', transform: 'translateY(30%)' }}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </Container>
+        </ClientProviders>
       </body>
     </html>
   )

@@ -3,17 +3,16 @@
 import Image from "next/image"
 import Container from "@/components/ui/Container"
 import { motion } from "framer-motion"
+import { Inter } from "next/font/google"
 
-export default function FeaturesHighlight() {
+const inter = Inter({ subsets: ["latin"], display: "swap" })
+
+export default function FeaturesHighlightEn() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { duration: 0.6, staggerChildren: 0.1, delayChildren: 0.2 },
     },
   }
 
@@ -24,14 +23,7 @@ export default function FeaturesHighlight() {
 
   const imageVariants = {
     hidden: { opacity: 0, x: 50 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.7,
-        delay: 0.3,
-      },
-    },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.7, delay: 0.3 } },
   }
 
   return (
@@ -44,17 +36,19 @@ export default function FeaturesHighlight() {
         className="relative px-4 py-10 sm:px-6 md:px-10 sm:py-12 md:py-14 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]"
       >
         <div className="relative z-10 h-fit">
-          {/* Texte */}
+          {/* Text */}
           <div className="text-white space-y-4 sm:space-y-6 md:w-2/3 md:pr-10">
-            {/* H2 optimisé pour LCP */}
+            {/* H2 optimized for LCP (painted immediately) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold">
-                Organisez vos événements privés
+              <h2
+                className={`${inter.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold`}
+              >
+                Organize private events with ease
               </h2>
             </motion.div>
 
@@ -62,9 +56,8 @@ export default function FeaturesHighlight() {
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed max-w-2xl"
             >
-              Avec BOB, créez{" "}
-              <strong className="font-bold">des événements</strong> privés pour vos proches et gérez tout ce qui est
-              nécessaire en un seul endroit. Idéal pour un barbecue, un déménagement ou un projet entre amis.
+              With BOB, create <strong className="font-bold">private events</strong> for your close circle and manage
+              everything in one place. Perfect for a BBQ, a move, or a small project with friends.
             </motion.p>
 
             <motion.ul variants={containerVariants} className="space-y-3 text-white/95">
@@ -72,26 +65,26 @@ export default function FeaturesHighlight() {
                 {
                   text: (
                     <>
-                      <strong>Créez une liste avec vos besoins et services</strong> : par exemple, &quot;2 chaises
-                      pliantes&quot;, &quot;boissons fraîches&quot;, &quot;aide pour monter un meuble&quot;
+                      <strong>Create a mixed checklist</strong>: e.g. &quot;2 folding chairs&quot;, &quot;cold
+                      drinks&quot;, &quot;help assembling a shelf&quot;
                     </>
                   ),
                 },
                 {
                   text: (
                     <>
-                      <strong>Chaque participant se positionne</strong> : chacun choisit un élément de la liste et
-                      s’engage à l’apporter ou à le réaliser
+                      <strong>Guests claim in one tap</strong>: each person picks an item and commits to bringing or
+                      doing it
                     </>
                   ),
                 },
-                { text: <><strong>Invitations ciblées</strong> : 5, 10 ou 20 contacts</> },
-                { text: <><strong>Chat collectif pour coordonner tout le monde</strong></> },
+                { text: <> <strong>Targeted invites</strong>: 5, 10 or 20 contacts</> },
+                { text: <> <strong>Group chat</strong> to coordinate everyone</> },
                 {
                   text: (
                     <>
-                      <strong>Positionnement en 1 clic</strong> : dès qu’un participant se positionne, l&apos;échange
-                      individuel est créé automatiquement
+                      <strong>Auto-tracked exchanges</strong>: once claimed, an individual exchange is created
+                      automatically
                     </>
                   ),
                 },
@@ -104,14 +97,14 @@ export default function FeaturesHighlight() {
             </motion.ul>
           </div>
 
-          {/* Image principale optimisée */}
+          {/* Main image (lazy, sized close to render) */}
           <motion.div
             variants={imageVariants}
             className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-0 md:w-1/3 flex items-center justify-center"
           >
             <Image
               src="/events-preview.webp"
-              alt="Aperçu mobile d'un événement privé"
+              alt="Mobile preview of a private event"
               width={520}
               height={800}
               className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-110 sm:scale-125 h-auto object-contain drop-shadow-2xl"
@@ -121,14 +114,14 @@ export default function FeaturesHighlight() {
           </motion.div>
         </div>
 
-        {/* Décor de fond */}
+        {/* Subtle background decoration */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-y-0 right-0 w-2/3 bg-[url('/frame-decor.svg')] bg-no-repeat bg-right bg-cover opacity-30"
         />
       </motion.div>
 
-      {/* Image décorative supplémentaire */}
+      {/* Extra decorative image (lazy) */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +130,7 @@ export default function FeaturesHighlight() {
       >
         <Image
           src="/mask-group.webp"
-          alt="Décor graphique"
+          alt="Graphic decoration"
           width={600}
           height={600}
           className="mx-auto w-full max-w-6xl h-auto object-contain"
