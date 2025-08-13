@@ -4,6 +4,8 @@ import {inter, jakarta} from './fonts'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Analytics from '@/components/Analytics'
+import Image from 'next/image'
+import Container from '@/components/ui/Container' // Make sure to import the Container component
 
 const name = process.env.NEXT_PUBLIC_SITE_NAME || 'BOB'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://new-bob.vercel.app'
@@ -45,11 +47,31 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
       <html lang="fr" className={`${inter.variable} ${jakarta.variable}`}>
-      <body className="min-h-screen bg-gradient-to-r from-primary via-white to-primary text-[--fg] antialiased">
-      <Navbar/>
-      <main>{children}</main>
-      <Footer/>
-      <Analytics/>
+      <body
+          className="relative min-h-screen bg-gradient-to-r from-primary via-white to-primary text-[--fg] antialiased overflow-x-hidden"
+      >
+      <div className="relative z-10">
+        <Navbar/>
+        <main>{children}</main>
+        <Footer/>
+        <Analytics/>
+      </div>
+      <Container className="absolute inset-x-0 bottom-0 z-0">
+        <div className="relative w-full overflow-hidden">
+          <Image
+              src="/circle.png"
+              alt=""
+              width={1800}
+              height={1800}
+              className="w-full object-cover object-top"
+              style={{
+                height: '110vh',
+                minHeight: '800px',
+                transform: 'translateY(30%)',
+              }}
+          />
+        </div>
+      </Container>
       </body>
       </html>
   )

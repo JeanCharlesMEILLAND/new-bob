@@ -81,7 +81,7 @@ export const FeaturesHighlight = () => {
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
                 <strong>Chaque participant se positionne</strong> &nbsp;: chacun choisit un élément de la liste et
-                s'engage à l'apporter ou à le réaliser
+                s&#39;engage à l&#39;apporter ou à le réaliser
               </span>
                 </motion.li>
                 <motion.li
@@ -101,7 +101,7 @@ export const FeaturesHighlight = () => {
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
-                <strong>Positionnement en 1 clic</strong> &nbsp;: dès qu'un participant se positionne, l'échange
+                <strong>Positionnement en 1 clic</strong> &nbsp;: dès qu&#39;un participant se positionne, l'échange
                 individuel est créé automatiquement
               </span>
                 </motion.li>
