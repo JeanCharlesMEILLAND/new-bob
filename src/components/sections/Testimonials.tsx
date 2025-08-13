@@ -59,7 +59,7 @@ export default function Testimonials() {
                       initial={{opacity: 0, scale: 0.9}}
                       animate={{opacity: 1, scale: 1}}
                       transition={{duration: 0.5, delay: index * 0.1}}
-                      className={" cursor-grab bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl space-y-3 sm:space-y-5 w-full"}
+                      className={" max-w-xs mx-auto md:max-w-none cursor-grab bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl space-y-3 sm:space-y-5 w-full"}
                       key={index}
                       whileHover={{y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)"}}
                   >
