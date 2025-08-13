@@ -8,10 +8,10 @@ const CircleBgComponent = () => {
       aria-hidden="true"
     >
       <Image
-        src="/circle.webp" // converti en WebP pour réduire le poids
+        src="/circle-small.webp" // Image réduite à 206x190px
         alt=""
-        width={1800}
-        height={1800}
+        width={206}
+        height={190}
         className="h-screen scale-150 w-auto object-contain block"
         loading="lazy"
         decoding="async"
@@ -21,7 +21,6 @@ const CircleBgComponent = () => {
   )
 }
 
-// Ajout d'un displayName pour ESLint
 CircleBgComponent.displayName = "CircleBg"
 
 export const CircleBg = memo(CircleBgComponent)

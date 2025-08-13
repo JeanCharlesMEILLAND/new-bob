@@ -7,6 +7,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./public/**/*.html",
   ],
+  safelist: [
+    // Ajoute ici les classes générées dynamiquement non détectées par Tailwind
+    // Exemple: "text-red-500", "bg-blue-500"
+  ],
   theme: {
     extend: {
       colors: {
@@ -46,4 +50,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

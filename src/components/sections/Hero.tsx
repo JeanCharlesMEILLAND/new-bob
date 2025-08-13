@@ -4,9 +4,6 @@ import Image from "next/image"
 import Container from "@/components/ui/Container"
 import { CircleBg } from "@/components/CircleBg"
 import { motion } from "framer-motion"
-import { Inter } from "next/font/google"
-
-const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export default function Hero() {
   return (
@@ -35,18 +32,20 @@ export default function Hero() {
           <span className="sm:hidden">Usage privé • Sans transaction • Confidentiel</span>
         </motion.div>
 
-        {/* Titre principal optimisé */}
-        <motion.h1
+        {/* Titre principal optimisé pour LCP */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className={`${inter.className} mt-6 sm:mt-10 md:mt-22 text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight text-accent`}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
-          <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-bold">
-            Bober
-          </span>
-          , c&#39;est partager, aider, organiser…
-        </motion.h1>
+          <h1 className="mt-6 sm:mt-10 md:mt-22 text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight">
+            <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-bold">
+              Bober
+            </span>
+            , c&#39;est partager, aider, organiser…
+          </h1>
+        </motion.div>
 
         {/* Sous-titre */}
         <motion.p
@@ -80,6 +79,7 @@ export default function Hero() {
           id="download"
           className="flex flex-wrap items-center justify-center gap-5 pt-4"
         >
+          {/* App Store (priority) */}
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -95,8 +95,11 @@ export default function Hero() {
               width={180}
               height={54}
               priority
+              fetchPriority="high"
             />
           </motion.a>
+
+          {/* Play Store (lazy) */}
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -111,7 +114,9 @@ export default function Hero() {
               alt="Disponible sur Google Play"
               width={190}
               height={54}
-              priority
+              loading="lazy"
+              fetchPriority="low"
+              decoding="async"
             />
           </motion.a>
         </motion.div>

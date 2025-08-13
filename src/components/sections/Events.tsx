@@ -1,6 +1,14 @@
 // components/sections/Events.tsx
-import Container from '@/components/ui/Container'
-import Image from 'next/image'
+"use client"
+
+import Container from "@/components/ui/Container"
+import dynamic from "next/dynamic"
+
+// Import dynamique → Swiper et sa CSS chargés uniquement au rendu client
+const ItemSwiper = dynamic(() => import("@/components/item-swiper/ItemSwiper"), {
+  ssr: false,
+  loading: () => null,
+})
 
 export default function Events() {
   return (
@@ -26,13 +34,26 @@ export default function Events() {
             </ul>
           </div>
 
-          {/* Visuel placeholder */}
+          {/* Slider d’illustrations avec ItemSwiper */}
           <div className="rounded-2xl border border-white/10 bg-white/5 p-3 shadow-glow">
-            <div className="aspect-[4/3] w-full rounded-xl2 bg-black/30 ring-1 ring-white/10 flex items-center justify-center text-white/60">
-              <span className="text-sm text-center px-4">
-                Capture d’écran recommandée : exemple d’événement avec liste mixte
-              </span>
-            </div>
+            <ItemSwiper className="aspect-[4/3] w-full rounded-xl2 ring-1 ring-white/10">
+              {/* Exemple de slides */}
+              <div className="flex items-center justify-center bg-black/30 text-white/60 p-4 rounded-xl2">
+                <span className="text-sm text-center px-4">
+                  Capture d’écran : exemple d’événement avec liste mixte
+                </span>
+              </div>
+              <div className="flex items-center justify-center bg-black/30 text-white/60 p-4 rounded-xl2">
+                <span className="text-sm text-center px-4">
+                  Capture d’écran : gestion des invitations
+                </span>
+              </div>
+              <div className="flex items-center justify-center bg-black/30 text-white/60 p-4 rounded-xl2">
+                <span className="text-sm text-center px-4">
+                  Capture d’écran : chat collectif
+                </span>
+              </div>
+            </ItemSwiper>
           </div>
         </div>
       </Container>
