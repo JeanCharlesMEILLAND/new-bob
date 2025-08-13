@@ -16,7 +16,7 @@ export default function Hero() {
         {/* Hero background image - absolute positioned on right, vertically centered */}
         <CircleBg/>
 
-        <WhiteGradient/>
+        {/*<WhiteGradient/>*/}
 
         {/* Fonds décoratifs */}
         <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70"/>
