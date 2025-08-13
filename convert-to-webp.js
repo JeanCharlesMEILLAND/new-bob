@@ -1,6 +1,5 @@
 // convert-to-webp.js
-const sharp = require("sharp");
-const fs = require("fs");
+import sharp from "sharp";
 
 const input = "public/circle.png";
 const output = "public/circle.webp";
