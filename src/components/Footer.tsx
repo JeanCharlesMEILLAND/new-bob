@@ -7,7 +7,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Bob App — Tous droits réservés.</p>
           <div className="flex items-center gap-6">
             <a href="/conditions-utilisation" className="hover:text-accent/90">CGU</a>
-            <a href="/legal/privacy" className="hover:text-accent/90">Vie privée</a>
+            <a href="/mentions-legales" className="hover:text-accent/90">Mentions Légales</a>
             <a href="mailto:hello@bobapp.fr" className="hover:text-accent/90">Contact</a>
           </div>
         </Container>
