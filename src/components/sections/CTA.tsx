@@ -107,11 +107,11 @@ export default function CTA() {
                 className="mt-8 md:mt-0 md:absolute bottom-10 md:-bottom-2 md:inset-y-0 md:right-0 md:w-1/2 flex items-center justify-center"
             >
               <Image
-                  src="/group-app-preview.webp"
+                  src="/Group 1000001289 (1).webp"
                   alt="Aperçu de l'application sur smartphone"
-                  width={560}
-                  height={340}
-                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[560px] h-auto object-contain drop-shadow-2xl scale-110 sm:scale-120 md:scale-[130%]"
+                  width={1302}
+                  height={824}
+                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[560px] h-auto object-contain drop-shadow-2xl scale-110 sm:scale-120 md:scale-125"
                   priority
                   fetchPriority="high"
                   decoding="async"
