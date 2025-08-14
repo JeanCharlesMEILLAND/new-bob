@@ -1,0 +1,116 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Accueil":
+    - /url: /?lang=fr
+    - img "Logo BOB"
+  - link "English":
+    - /url: /?lang=en
+    - img "English"
+  - link "Français":
+    - /url: /?lang=fr
+    - img "Français"
+- main:
+  - text: Private use with people you know • No financial transactions • No public matchmaking
+  - heading "Bober, share, help, organize — privately." [level=1]
+  - paragraph:
+    - text: Manage your exchanges of
+    - strong: items
+    - text: ","
+    - strong: services
+    - text: ", and"
+    - strong: events
+    - text: — simply and confidentially, only with your contacts.
+  - paragraph: Available on iOS and Android
+  - link "Download BOB on the App Store":
+    - /url: https://apps.apple.com/app/id6743935044
+    - img "Available on the App Store"
+  - link "Download BOB on Google Play":
+    - /url: https://play.google.com/store/apps/details?id=com.bobapp
+    - img "Get it on Google Play"
+  - article:
+    - heading "For people you know" [level=3]
+    - paragraph: Works with the contacts in your phone. No public directory, no strangers — private by design.
+  - article:
+    - heading "Built-in messaging" [level=3]
+    - paragraph: Chat 1-to-1 for exchanges or use the event group chat to coordinate everyone effortlessly.
+  - article:
+    - heading "Objects & services" [level=3]
+    - paragraph: "Offer or request in private: one confirmation is all it takes — then the exchange is tracked automatically."
+  - img "BOB app preview"
+  - article:
+    - heading "Reminders & calendar" [level=3]
+    - paragraph: Automatic reminders on both sides and optional calendar events so nothing gets forgotten.
+  - article:
+    - heading "Private events" [level=3]
+    - paragraph: Invite a small group. Mixed list (items, consumables, services) and one-tap commitments.
+  - article:
+    - heading "Privacy first" [level=3]
+    - paragraph: No payments. No public matchmaking. Your personal history stays with you and your contacts.
+  - heading "Organize your private events" [level=2]
+  - paragraph:
+    - text: With BOB, create
+    - strong: private events
+    - text: for your close circle and manage everything needed in one place. Perfect for a barbecue, a move, or a small project with friends.
+  - list:
+    - listitem:
+      - strong: Create a list of needs and services
+      - text: ": e.g., \"2 folding chairs\", \"cold drinks\", \"help assembling a shelf\""
+    - listitem:
+      - strong: Each guest commits
+      - text: ": they pick an item from the list and commit to bringing or doing it"
+    - listitem:
+      - strong: Targeted invites
+      - text: ": 5, 10 or 20 contacts"
+    - listitem:
+      - strong: Group chat
+      - text: to coordinate everyone
+    - listitem:
+      - strong: One-tap commitments
+      - text: ": as soon as someone commits, the individual exchange is created automatically"
+  - img "Mobile preview of a private event"
+  - img "Graphic decoration"
+  - heading "What People Say" [level=2]
+  - img "Quote icon"
+  - paragraph: We avoided buying duplicate equipment. The interface is simple and everyone can keep track easily.
+  - paragraph: "- Sarah, Association President"
+  - img "Quote icon"
+  - paragraph: We share tools and kids’ games. The reminders help us avoid forgetting anything.
+  - paragraph: "- Karim, Neighborhood"
+  - img "Quote icon"
+  - paragraph: Perfect for engaging an internal group across multiple sites. Lightweight but effective tracking.
+  - paragraph: "- Élodie, HR"
+  - img "Quote icon"
+  - paragraph: We share tools and kids’ games. The reminders help us avoid forgetting anything.
+  - paragraph: "- Karim, Neighborhood"
+  - img "Quote icon"
+  - paragraph: Perfect for engaging an internal group across multiple sites. Lightweight but effective tracking.
+  - paragraph: "- Élodie, HR"
+  - heading "Start bobing right now!" [level=2]
+  - paragraph: With BOB, organizing your private exchanges becomes simple and well tracked. The app is 100% free, with no payments or subscriptions, and all features included.
+  - link "Download BOB on the App Store":
+    - /url: https://apps.apple.com/app/id6743935044
+    - img "Available on the App Store"
+  - link "Get BOB on Google Play":
+    - /url: https://play.google.com/store/apps/details?id=com.bobapp
+    - img "Get it on Google Play"
+  - img "App preview on smartphone"
+- contentinfo:
+  - paragraph: © 2025 BOB — Borrow and Back. Tous droits réservés.
+  - navigation "Liens légaux":
+    - list:
+      - listitem:
+        - link "CGU":
+          - /url: /conditions-utilisation?lang=fr
+      - listitem:
+        - link "Confidentialité":
+          - /url: /confidentialite?lang=fr
+      - listitem:
+        - link "Mentions légales":
+          - /url: /mentions-legales?lang=fr
+      - listitem:
+        - link "Contact":
+          - /url: mailto:hello@bobapp.fr
+- alert
+```

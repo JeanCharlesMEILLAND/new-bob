@@ -9,10 +9,7 @@ export default function Features() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
     },
   }
 
@@ -23,18 +20,12 @@ export default function Features() {
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        delay: 0.5,
-      },
-    },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.5 } },
   }
 
   return (
-    <motion.div
+    <motion.section
+      aria-labelledby="features-heading"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -48,41 +39,54 @@ export default function Features() {
       "
       id="features"
     >
+      {/* H2 masqué visuellement mais lu par les aides techniques */}
+      <h2 id="features-heading" className="sr-only">
+        Fonctionnalités principales
+      </h2>
+
       {/* Colonne gauche */}
       <motion.div variants={itemVariants} className="mx-auto md:mt-8 lg:mt-0 md:ml-5 lg:col-start-1 lg:row-start-1">
         <FeaturesCard
           icon="/icons/Entre proches.svg"
           title="Entre proches uniquement"
           description="Fonctionne avec les contacts de votre téléphone. Pas d'annuaire public, pas d'inconnus."
+          as="h3"
+          titleId="feature-proches"
         />
       </motion.div>
+
       <motion.div variants={itemVariants} className="mx-auto md:-mt-4 lg:mt-0 md:mr-5 lg:col-start-1 lg:row-start-2">
         <FeaturesCard
           icon="/icons/Frame 1597880141.svg"
           title="Messagerie intégrée"
           description="Discutez en tête-à-tête pour vos échanges ou utilisez le chat d'événement pour coordonner un groupe."
+          as="h3"
+          titleId="feature-messages"
         />
       </motion.div>
+
       <motion.div variants={itemVariants} className="mx-auto md:mt-8 lg:mt-0 md:ml-5 lg:col-start-1 lg:row-start-3">
         <FeaturesCard
           icon="/icons/Frame 1597880138.svg"
           title="Échanges d'objets & services"
           description="Proposez ou demandez en privé : un geste, une confirmation… et l'échange est suivi automatiquement."
+          as="h3"
+          titleId="feature-echanges"
         />
       </motion.div>
 
-      {/* Image centrale optimisée */}
+      {/* Image centrale */}
       <motion.div
         variants={imageVariants}
         className="my-8 md:my-0 md:col-span-3 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:row-span-3 justify-self-center self-center"
       >
         <Image
           src="/central.png"
-          alt="Aperçu de l'événement"
-          width={300} // largeur réelle sur mobile
+          alt="Aperçu de l'événement dans l'application"
+          width={300}
           height={300}
           className="w-full h-auto max-w-[300px] md:max-w-full object-contain z-10 mx-auto"
-          priority // pour aider LCP
+          priority
           fetchPriority="high"
         />
       </motion.div>
@@ -93,22 +97,30 @@ export default function Features() {
           icon="/icons/Frame 1597880140.svg"
           title="Rappels & agenda"
           description="Rappels automatiques des deux côtés et ajout à l'agenda pour éviter les oublis."
+          as="h3"
+          titleId="feature-rappels"
         />
       </motion.div>
+
       <motion.div variants={itemVariants} className="mx-auto md:mt-8 lg:mt-0 md:ml-5 lg:col-start-3 lg:row-start-2">
         <FeaturesCard
           icon="/icons/Frame 1597880139.svg"
           title="Événements privés"
           description="Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic."
+          as="h3"
+          titleId="feature-evenements"
         />
       </motion.div>
+
       <motion.div variants={itemVariants} className="mx-auto md:-mt-4 lg:mt-0 md:mr-5 lg:col-start-3 lg:row-start-3">
         <FeaturesCard
           icon="/icons/Frame 1597880142.svg"
           title="Confidentialité intégrée"
           description="Aucune transaction financière. Aucune mise en relation publique. Historique personnel."
+          as="h3"
+          titleId="feature-confidentialite"
         />
       </motion.div>
-    </motion.div>
+    </motion.section>
   )
 }
