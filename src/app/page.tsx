@@ -16,22 +16,24 @@ import TestimonialsEN from '../components/sections/Testimonials.en'
 import CTAFR from '../components/sections/CTA'
 import CTAEN from '../components/sections/CTA.en'
 
-export default function Page({
+export default async function Page({
   searchParams,
 }: {
-  searchParams?: { lang?: string; invitor?: string; token?: string }
+  searchParams?: Promise<{ lang?: string; invitor?: string; token?: string }>
 }) {
-  const invitor = searchParams?.invitor ?? searchParams?.token
+  const params = await searchParams
+
+  const invitor = params?.invitor ?? params?.token
   if (invitor) {
     redirect(`/invitation?invitor=${encodeURIComponent(invitor)}`)
   }
 
-  // ✅ Redirection si pas de paramètre lang
-  if (!searchParams?.lang) {
+  // Redirection si pas de paramètre lang
+  if (!params?.lang) {
     redirect('/?lang=fr')
   }
 
-  const lang = searchParams.lang.toLowerCase() === 'en' ? 'en' : 'fr'
+  const lang = params.lang.toLowerCase() === 'en' ? 'en' : 'fr'
 
   const Hero = lang === 'en' ? HeroEN : HeroFR
   const Features = lang === 'en' ? FeaturesEN : FeaturesFR
