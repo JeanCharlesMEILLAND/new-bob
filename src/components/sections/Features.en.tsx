@@ -19,8 +19,12 @@ export default function FeaturesEn() {
   }
 
   const imageVariants = {
-    hidden: {opacity: 0, scale: 0.9},
-    visible: {opacity: 1, scale: 1.1, transition: {duration: 0.8, delay: 0.5}},
+    hidden: {opacity: 0, scale: 0.95},
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {duration: 0.8, delay: 0.5},
+    },
   }
 
   return (
@@ -80,9 +84,8 @@ export default function FeaturesEn() {
               width={300}
               height={300}
               className="w-full h-auto max-w-[300px] md:max-w-full object-contain z-10 mx-auto"
-              priority={false}
-              loading="lazy"
-              decoding="async"
+              priority
+              fetchPriority="high"
           />
         </motion.div>
 

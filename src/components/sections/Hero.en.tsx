@@ -18,7 +18,7 @@ export default function HeroEn() {
     >
       {/* Decorative background */}
       <CircleBg />
-      {/* keep lightweight grid only (no external bg asset) */}
+      <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70" />
       <div className="absolute inset-0 -z-20 bg-grid opacity-[0.25] [mask-image:radial-gradient(circle_at_center,black,transparent_70%)]" />
 
       <Container className="text-center space-y-10 relative z-10">

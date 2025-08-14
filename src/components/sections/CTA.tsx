@@ -24,7 +24,7 @@ export default function CTA() {
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true, amount: 0.2}}
             transition={{duration: 0.8}}
-            className="relative px-4 py-8 pb-0 sm:px-6 md:px-10 sm:py-10 md:py-14 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]"
+            className="min-h-[421px] relative px-4 py-8 pb-0 sm:px-6 md:px-10 sm:py-10 md:py-14 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-[#166DF6] to-[#05B1F5]"
         >
           <div className="relative z-10 h-fit">
             {/* Texte */}
