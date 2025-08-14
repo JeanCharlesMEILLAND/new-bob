@@ -104,7 +104,7 @@ export default function CTA() {
                 whileInView={{opacity: 1, x: 0}}
                 viewport={{once: true}}
                 transition={{duration: 0.8, delay: 0.5}}
-                className="mt-8 md:mt-0 md:absolute bottom-10 md:-bottom-2 md:inset-y-0 md:-right-0 md:w-1/2 flex items-center justify-center"
+                className="mt-8 md:mt-0 md:absolute bottom-10 md:-bottom-2 md:inset-y-0 md:-right-10 md:w-1/2 flex items-center justify-center"
             >
               <Image
                   src="/Group 1000001289 (1).webp"
