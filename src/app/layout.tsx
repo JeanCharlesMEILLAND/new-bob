@@ -7,6 +7,7 @@ import Analytics from '@/components/Analytics'
 import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import ClientProviders from '@/components/ClientProviders'
+import { Suspense } from 'react'
 
 const name = process.env.NEXT_PUBLIC_SITE_NAME || 'BOB'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://new-bob.vercel.app'
@@ -43,6 +44,16 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
+// Loader stylé type "shimmer"
+function SkeletonBar() {
+  return (
+    <div className="w-full h-10 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 bg-[length:200%_100%] animate-shimmer rounded">
+      {/* on peut ajouter du texte invisible pour l'accessibilité */}
+      <span className="sr-only">Chargement...</span>
+    </div>
+  )
+}
+
 export default function RootLayout({
   children,
   searchParams,
@@ -57,9 +68,18 @@ export default function RootLayout({
       <body className="relative min-h-screen bg-gradient-to-r from-primary via-white to-primary text-[--fg] antialiased overflow-x-hidden">
         <ClientProviders>
           <div className="relative z-10">
-            <Navbar />
+            {/* Navbar avec loader stylé */}
+            <Suspense fallback={<SkeletonBar />}>
+              <Navbar />
+            </Suspense>
+
             <main>{children}</main>
-            <Footer />
+
+            {/* Footer avec loader stylé */}
+            <Suspense fallback={<SkeletonBar />}>
+              <Footer />
+            </Suspense>
+
             <Analytics />
           </div>
 
