@@ -9,6 +9,7 @@
     "lint": "next lint --max-warnings=0"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "clsx": "^2.1.1",
     "critters": "^0.0.25",
     "flag-icons": "^7.5.0",
