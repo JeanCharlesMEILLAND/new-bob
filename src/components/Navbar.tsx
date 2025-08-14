@@ -6,22 +6,20 @@ import Image from 'next/image'
 import Container from './ui/Container'
 import { useEffect, useState } from 'react'
 
-export default function Navbar({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  // Crée une URL en changeant juste la langue et en gardant la page actuelle
+  const currentLang = (searchParams.get('lang') || 'fr').toLowerCase() === 'en' ? 'en' : 'fr'
+
   const createLangUrl = (newLang: 'fr' | 'en') => {
     const params = new URLSearchParams(searchParams.toString())
     params.set('lang', newLang)
     return `${pathname}?${params.toString()}`
   }
 
-  // Crée une URL vers la home dans la langue choisie
-  const createHomeUrl = (currentLang: 'fr' | 'en') => {
-    return `/?lang=${currentLang}`
-  }
+  const createHomeUrl = (lang: 'fr' | 'en') => `/?lang=${lang}`
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -36,8 +34,8 @@ export default function Navbar({ lang = 'fr' }: { lang?: 'fr' | 'en' }) {
       style={{ backgroundColor: scrolled ? '#EDF3FF' : 'transparent' }}
     >
       <Container className="flex items-center justify-between py-8">
-        {/* Logo → renvoie toujours vers la landing page dans la langue actuelle */}
-        <Link href={createHomeUrl(lang)} aria-label={lang === 'fr' ? 'Accueil' : 'Home'}>
+        {/* Logo → page d’accueil dans la langue actuelle */}
+        <Link href={createHomeUrl(currentLang)} aria-label={currentLang === 'fr' ? 'Accueil' : 'Home'}>
           <Image
             src="/Group 1000001197.svg"
             alt="Logo BOB"

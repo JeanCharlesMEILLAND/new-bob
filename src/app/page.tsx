@@ -1,5 +1,5 @@
 // app/page.tsx
-import {redirect} from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 import HeroFR from '../components/sections/Hero'
 import HeroEN from '../components/sections/Hero.en'
@@ -16,17 +16,22 @@ import TestimonialsEN from '../components/sections/Testimonials.en'
 import CTAFR from '../components/sections/CTA'
 import CTAEN from '../components/sections/CTA.en'
 
-// App Router: Next.js passe automatiquement searchParams à la page
-export default function Page(props: { searchParams?: { lang?: string; invitor?: string; token?: string } }) {
-  const {searchParams} = props
-
+export default function Page({
+  searchParams,
+}: {
+  searchParams?: { lang?: string; invitor?: string; token?: string }
+}) {
   const invitor = searchParams?.invitor ?? searchParams?.token
   if (invitor) {
     redirect(`/invitation?invitor=${encodeURIComponent(invitor)}`)
   }
 
-  const langParam = (searchParams?.lang || 'fr').toLowerCase()
-  const lang = langParam === 'en' ? 'en' : 'fr'
+  // ✅ Redirection si pas de paramètre lang
+  if (!searchParams?.lang) {
+    redirect('/?lang=fr')
+  }
+
+  const lang = searchParams.lang.toLowerCase() === 'en' ? 'en' : 'fr'
 
   const Hero = lang === 'en' ? HeroEN : HeroFR
   const Features = lang === 'en' ? FeaturesEN : FeaturesFR
@@ -35,12 +40,12 @@ export default function Page(props: { searchParams?: { lang?: string; invitor?: 
   const CTA = lang === 'en' ? CTAEN : CTAFR
 
   return (
-      <>
-        <Hero/>
-        <Features/>
-        <FeaturesHighlight/>
-        <Testimonials/>
-        <CTA/>
-      </>
+    <>
+      <Hero />
+      <Features />
+      <FeaturesHighlight />
+      <Testimonials />
+      <CTA />
+    </>
   )
 }

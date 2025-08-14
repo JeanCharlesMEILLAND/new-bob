@@ -57,7 +57,7 @@ export default function RootLayout({
       <body className="relative min-h-screen bg-gradient-to-r from-primary via-white to-primary text-[--fg] antialiased overflow-x-hidden">
         <ClientProviders>
           <div className="relative z-10">
-            <Navbar lang={lang} />
+            <Navbar />
             <main>{children}</main>
             <Footer />
             <Analytics />

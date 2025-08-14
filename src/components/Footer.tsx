@@ -19,34 +19,22 @@ export default function Footer() {
         <nav aria-label={lang === 'fr' ? 'Liens légaux' : 'Legal links'}>
           <ul className="flex items-center gap-6">
             <li>
-              <Link
-                href={`/conditions-utilisation?lang=${lang}`}
-                className="hover:text-accent/90"
-              >
+              <Link href={`/conditions-utilisation?lang=${lang}`} className="hover:text-accent/90">
                 {lang === 'fr' ? 'CGU' : 'Terms of Use'}
               </Link>
             </li>
             <li>
-              <Link
-                href={`/confidentialite?lang=${lang}`}
-                className="hover:text-accent/90"
-              >
+              <Link href={`/confidentialite?lang=${lang}`} className="hover:text-accent/90">
                 {lang === 'fr' ? 'Confidentialité' : 'Privacy Policy'}
               </Link>
             </li>
             <li>
-              <Link
-                href={`/mentions-legales?lang=${lang}`}
-                className="hover:text-accent/90"
-              >
+              <Link href={`/mentions-legales?lang=${lang}`} className="hover:text-accent/90">
                 {lang === 'fr' ? 'Mentions légales' : 'Legal Notice'}
               </Link>
             </li>
             <li>
-              <a
-                href="mailto:hello@bobapp.fr"
-                className="hover:text-accent/90"
-              >
+              <a href="mailto:hello@bobapp.fr" className="hover:text-accent/90">
                 Contact
               </a>
             </li>
