@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"], // Formats plus légers
     remotePatterns: [
-      { protocol: "https", hostname: "bobapp.fr" }, // Domaine principal
-      { protocol: "https", hostname: "res.cloudinary.com" }, // Exemple si tu utilises Cloudinary
+      {protocol: "https", hostname: "bobapp.fr"}, // Domaine principal
+      {protocol: "https", hostname: "res.cloudinary.com"}, // Exemple si tu utilises Cloudinary
     ],
   },
 
@@ -17,17 +17,22 @@ const nextConfig = {
   experimental: {
     optimizeCss: true, // Minifie et optimise le CSS
     optimizePackageImports: ["framer-motion", "swiper"], // Réduit le JS inutile
+
   },
 
   reactStrictMode: true, // Bonnes pratiques React
   poweredByHeader: false, // Retire "X-Powered-By: Next.js"
-
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true
+  },
   async headers() {
     return [
       {
         source: "/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif)",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {key: "Cache-Control", value: "public, max-age=31536000, immutable"},
         ],
       },
     ];

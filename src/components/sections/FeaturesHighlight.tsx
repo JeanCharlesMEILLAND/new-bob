@@ -71,7 +71,7 @@ export default function FeaturesHighlight() {
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
                 <strong>Créez une liste avec vos besoins et services</strong> &nbsp;: par exemple,
-                "2 chaises pliantes", "boissons fraîches", "aide pour monter un meuble"
+                    &#34;2 chaises pliantes&#34;, &#34;boissons fraîches&#34;, &#34;aide pour monter un meuble&#34;
               </span>
                 </motion.li>
                 <motion.li
@@ -100,7 +100,7 @@ export default function FeaturesHighlight() {
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
-                <strong>Positionnement en 1 clic</strong> &nbsp;: dès qu&#39;un participant se positionne, l'échange
+                <strong>Positionnement en 1 clic</strong> &nbsp;: dès qu&#39;un participant se positionne, l&#39;échange
                 individuel est créé automatiquement
               </span>
                 </motion.li>
