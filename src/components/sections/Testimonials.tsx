@@ -70,7 +70,7 @@ export default function Testimonials() {
                         height={40}
                         className="ml-auto"
                     />
-                    <p className="font-medium text-sm sm:text-base text-accent">{t.text}</p>
+                    <p className=" font-medium text-sm sm:text-base text-accent">{t.text}</p>
                     <p className="font-extrabold text-xs sm:text-sm md:text-base text-accent text-center"> - {t.name}</p>
                   </motion.div>
               ))}
