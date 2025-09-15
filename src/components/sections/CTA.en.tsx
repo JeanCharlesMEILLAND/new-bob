@@ -3,8 +3,23 @@
 import Image from "next/image"
 import Container from "@/components/ui/Container"
 import {motion} from "framer-motion"
+import { fetchDownloadLinks } from "@/utils/link.utils"
+import { useEffect, useState } from "react"
 
 export default function CTAEn() {
+  const [downloadLinks, setDownloadLinks] = useState({
+    ios: "https://apps.apple.com/app/id6743935044",
+    android: "https://play.google.com/store/apps/details?id=com.bobapp"
+  });
+
+  useEffect(() => {
+    const loadDownloadLinks = async () => {
+      const links = await fetchDownloadLinks();
+      setDownloadLinks(links);
+    };
+    
+    loadDownloadLinks();
+  }, []);
   return (
       <Container className="mt-16 relative">
         {/* Background decorative (same as default) */}
@@ -62,7 +77,7 @@ export default function CTAEn() {
                 <motion.a
                     whileHover={{scale: 1.05}}
                     whileTap={{scale: 0.95}}
-                    href="https://apps.apple.com/app/id6743935044"
+                    href={downloadLinks.ios}
                     aria-label="Download BOB on the App Store"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -80,7 +95,7 @@ export default function CTAEn() {
                 <motion.a
                     whileHover={{scale: 1.05}}
                     whileTap={{scale: 0.95}}
-                    href="https://play.google.com/store/apps/details?id=com.bobapp"
+                    href={downloadLinks.android}
                     aria-label="Get BOB on Google Play"
                     target="_blank"
                     rel="noopener noreferrer"

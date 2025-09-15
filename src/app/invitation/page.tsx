@@ -90,7 +90,7 @@ export default function Home() {
             />
           </a>
           <a
-              href={process.env.NEXT_PUBLICio_TEST_FLIGTH}
+              href={process.env.NEXT_PUBLICi_TEST_FLIGTH}
               className="inline-flex"
               target="_blank"
               rel="noopener noreferrer"

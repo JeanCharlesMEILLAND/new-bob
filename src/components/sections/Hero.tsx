@@ -4,8 +4,23 @@ import Image from "next/image"
 import Container from "@/components/ui/Container"
 import {CircleBg} from "@/components/CircleBg"
 import {motion} from "framer-motion"
+import {fetchDownloadLinks} from "@/utils/link.utils"
+import {useEffect, useState} from "react"
 
 export default function Hero() {
+  const [downloadLinks, setDownloadLinks] = useState({
+    ios: "https://apps.apple.com/app/id6743935044",
+    android: "https://play.google.com/store/apps/details?id=com.bobapp"
+  });
+
+  useEffect(() => {
+    const loadDownloadLinks = async () => {
+      const links = await fetchDownloadLinks();
+      setDownloadLinks(links);
+    };
+    loadDownloadLinks();
+  }, []);
+
   return (
       <motion.section
           initial={{opacity: 0}}
@@ -84,7 +99,7 @@ export default function Hero() {
             <motion.a
                 whileHover={{scale: 1.05}}
                 whileTap={{scale: 0.95}}
-                href="https://apps.apple.com/app/id6743935044"
+                href={downloadLinks.ios}
                 aria-label="Télécharger BOB sur l'App Store"
                 className="inline-flex"
                 target="_blank"
@@ -104,7 +119,7 @@ export default function Hero() {
             <motion.a
                 whileHover={{scale: 1.05}}
                 whileTap={{scale: 0.95}}
-                href="https://play.google.com/store/apps/details?id=com.bobapp"
+                href={downloadLinks.android}
                 aria-label="Télécharger BOB sur Google Play"
                 className="inline-flex"
                 target="_blank"
