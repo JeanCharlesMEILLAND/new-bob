@@ -13,6 +13,7 @@ export default function Home() {
     android: "https://play.google.com/store/apps/details?id=com.bobapp"
   })
   const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isCopied, setIsCopied] = useState<boolean>(false)
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -62,12 +63,19 @@ export default function Home() {
                     <button
                         onClick={() => {
                           navigator.clipboard.writeText(referrer);
+                          setIsCopied(true);
+                          setTimeout(() => setIsCopied(false), 2000);
                         }}
                         className="ml-2 text-accent transition-colors cursor-pointer"
                         title="Copier le code"
                     >
                       <ClipboardIcon className="h-5 w-5 inline"/>
                     </button>
+                    {isCopied && (
+                      <span className="ml-2 text-green-400 text-sm font-medium animate-fade-in">
+                        Copié !
+                      </span>
+                    )}
                   </>
               )
               : 'Découvrez notre application dès maintenant !'}
