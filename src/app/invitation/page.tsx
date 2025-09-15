@@ -2,13 +2,16 @@
 
 import {useEffect, useState} from 'react'
 import Image from 'next/image'
-import {fetchAndroidLink} from "@/utils/link.utils";
+import {fetchDownloadLinks} from "@/utils/link.utils";
 import {ClipboardIcon} from '@heroicons/react/24/outline'
 
 
 export default function Home() {
   const [referrer, setReferrer] = useState<string | null>(null)
-  const [androidUrl, setAndroidUrl] = useState<string | null>(null)
+  const [downloadLinks, setDownloadLinks] = useState({
+    ios: "https://apps.apple.com/app/id6743935044",
+    android: "https://play.google.com/store/apps/details?id=com.bobapp"
+  })
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
@@ -19,13 +22,11 @@ export default function Home() {
     const startTime = Date.now();
 
     Promise.all([
-      fetchAndroidLink(),
+      fetchDownloadLinks(),
       new Promise(resolve => setTimeout(resolve, 2000)) // 2 second delay
-    ]).then(([url]) => {
-      console.log("====>", url)
-      if (url) {
-        setAndroidUrl(url)
-      }
+    ]).then(([links]) => {
+      console.log("====>", links)
+      setDownloadLinks(links)
       const elapsedTime = Date.now() - startTime;
       const remainingTime = Math.max(2000 - elapsedTime, 0);
       setTimeout(() => {
@@ -74,7 +75,7 @@ export default function Home() {
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-              href={androidUrl || ""}
+              href={downloadLinks.android}
               className="inline-flex"
               target="_blank"
               rel="noopener noreferrer"
@@ -90,7 +91,7 @@ export default function Home() {
             />
           </a>
           <a
-              href={process.env.NEXT_PUBLICi_TEST_FLIGTH}
+              href={downloadLinks.ios}
               className="inline-flex"
               target="_blank"
               rel="noopener noreferrer"
