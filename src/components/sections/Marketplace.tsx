@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container'
 export default function Marketplace() {
   return (
     <Container className="mb-16 relative">
-      <div className="relative px-4 sm:px-6 rounded-2xl sm:rounded-3xl bg-white shadow-lg">
+      <div className=" md:px-10 relative px-4 sm:px-6 rounded-2xl sm:rounded-3xl bg-white shadow-lg">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
           <div className="text-center lg:text-left">

@@ -111,7 +111,7 @@ export default function FeaturesHighlight() {
                   alt="Aperçu mobile d'un événement privé"
                   width={351}
                   height={516}
-                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-110 sm:scale-150 h-auto object-contain drop-shadow-2xl "
+                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-150 sm:scale-150 h-auto object-contain drop-shadow-2xl "
                   priority
               />
             </motion.div>

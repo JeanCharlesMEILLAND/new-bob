@@ -103,7 +103,7 @@ export default function Hero() {
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.6, delay: 0.8}}
               id="download"
-              className="flex flex-wrap items-center justify-center gap-5 !mt-0 pt-2"
+              className="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 md:gap-5 !mt-0 pt-2"
           >
             {/* App Store (priority) */}
             <motion.a
@@ -111,7 +111,7 @@ export default function Hero() {
                 whileTap={{scale: 0.95}}
                 href={downloadLinks.ios}
                 aria-label="Télécharger BOB sur l'App Store"
-                className="inline-flex"
+                className="inline-flex flex-shrink-0"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -120,6 +120,7 @@ export default function Hero() {
                   alt="Disponible sur l'App Store"
                   width={180}
                   height={54}
+                  className="w-[140px] sm:w-[160px] md:w-[180px] h-auto"
                   priority
                   fetchPriority="high"
               />
@@ -131,7 +132,7 @@ export default function Hero() {
                 whileTap={{scale: 0.95}}
                 href={downloadLinks.android}
                 aria-label="Télécharger BOB sur Google Play"
-                className="inline-flex"
+                className="inline-flex flex-shrink-0"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -140,6 +141,7 @@ export default function Hero() {
                   alt="Disponible sur Google Play"
                   width={190}
                   height={54}
+                  className="w-[140px] sm:w-[160px] md:w-[190px] h-auto"
                   loading="lazy"
                   fetchPriority="low"
                   decoding="async"

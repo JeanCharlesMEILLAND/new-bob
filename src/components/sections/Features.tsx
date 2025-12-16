@@ -26,21 +26,21 @@ export default function Features() {
   return (
     <section
       aria-labelledby="features-heading"
-      className="relative py-16 md:py-24 "
+      className="relative py-12 sm:py-16 md:py-20 lg:py-24 "
       id="features"
     >
       {/* Background decorative image */}
-      <div className="absolute inset-0 -top-1/2  pointer-events-none">
+      <div className="absolute inset-0 -top-1/4 md:-top-1/3 lg:-top-1/2 pointer-events-none">
         <Image
           src="/Frame 1000001361.png"
           alt=""
           fill
-          className="object-contain opacity-50"
+          className="object-contain opacity-30 sm:opacity-40 md:opacity-50"
           loading="lazy"
           quality={90}
         />
       </div>
-      <Container className="relative z-10 max-w-full px-4 sm:px-6 lg:px-8">
+      <Container className="relative z-10">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -53,19 +53,18 @@ export default function Features() {
             Fonctionnalités principales
           </h2>
 
-          {/* Main features content image - MADE LARGER */}
+          {/* Main features content image - Responsive */}
           <motion.div
             variants={imageVariants}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center "
           >
             <Image
               src="/Group 1000001359.png"
               alt="Fonctionnalités de l'application BOB - Bob Call, Messagerie intégrée, Échanges d'objets et services, Rappels et agenda, Événements privés, Entre proches uniquement, Bob IA, et Confidentialité intégrée"
               width={1800}
               height={1000}
-              className="w-full h-auto object-contain min-w-[1800px]"
+              className="w-full h-auto object-contain max-w-none lg:max-w-[1200px] xl:max-w-[1400px] 2xl:min-w-[1600px]"
               priority
-              quality={95}
             />
           </motion.div>
 

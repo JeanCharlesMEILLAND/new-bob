@@ -58,7 +58,7 @@ export default function FeaturesHighlightEn() {
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed max-w-2xl"
             >
-              With BOB, create <strong className={"font-bold"}>private events</strong> for your close circle and manage everything needed in one place. Perfect for a barbecue, a move, or a small project with friends.
+              With BOB, create <strong className={"font-bold"}>private events</strong> for your close circle and manage everything needed in one place. Perfect for a barbecue, a move, or a project with friends.
             </motion.p>
 
             <motion.ul
@@ -68,27 +68,27 @@ export default function FeaturesHighlightEn() {
               <motion.li variants={itemVariants} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
                 <span>
-                  <strong>Create a list of needs and services</strong>: e.g., &quot;2 folding chairs&quot;, &quot;cold drinks&quot;, &quot;help assembling a shelf&quot;
+                  <strong>Create a list of needs and services:</strong> e.g., &quot;2 folding chairs&quot;, &quot;cold drinks&quot;, &quot;help assembling furniture&quot;
                 </span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
                 <span>
-                  <strong>Each guest commits</strong>: they pick an item from the list and commit to bringing or doing it
+                  <strong>Each participant commits:</strong> everyone chooses an item from the list and commits to bringing or doing it
                 </span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
-                <span><strong>Targeted invites</strong>: 5, 10 or 20 contacts</span>
+                <span><strong>Targeted invitations:</strong> 5, 10 or 20 contacts</span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
-                <span><strong>Group chat</strong> to coordinate everyone</span>
+                <span><strong>Group chat to coordinate everyone</strong></span>
               </motion.li>
               <motion.li variants={itemVariants} className="flex gap-3">
                 <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0" />
                 <span>
-                  <strong>One-tap commitments</strong>: as soon as someone commits, the individual exchange is created automatically
+                  <strong>One-click positioning:</strong> as soon as someone commits, the individual exchange is created automatically
                 </span>
               </motion.li>
             </motion.ul>
