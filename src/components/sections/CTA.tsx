@@ -105,9 +105,9 @@ export default function CTA() {
                   <Image
                       src="/play-store.svg"
                       alt="Disponible sur Google Play"
-                      width={190}
+                      width={180}
                       height={54}
-                      className="w-[140px] sm:w-[160px] md:w-[190px] h-auto"
+                      className="w-[140px] sm:w-[160px] md:w-[180px] h-auto"
                       loading="lazy"
                       decoding="async"
                   />

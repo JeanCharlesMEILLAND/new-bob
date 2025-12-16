@@ -46,7 +46,7 @@ export default function Marketplace() {
                 <Image
                   src="/play-store.svg"
                   alt="Disponible sur Google Play"
-                  width={190}
+                  width={180}
                   height={54}
                   className="w-[120px] sm:w-[140px] md:w-[160px] h-auto"
                 />
