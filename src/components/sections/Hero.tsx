@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import Container from "@/components/ui/Container"
-import {CircleBg} from "@/components/CircleBg"
 import {motion} from "framer-motion"
 import {fetchDownloadLinks} from "@/utils/link.utils"
 import {useEffect, useState} from "react"
@@ -26,15 +25,11 @@ export default function Hero() {
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
-          className="relative pt-32 sm:pt-20 md:pt-28 pb-4 z-10 p"
+          className="relative pt-32 sm:pt-20 md:pt-28 pb-8 z-10"
+          style={{backgroundColor: '#E8F4F8'}}
       >
-        {/* Fond décoratif */}
-        <CircleBg/>
-        <div className="absolute inset-0 -z-10 bg-hero-radial bg-no-repeat opacity-70"/>
-        <div
-            className="absolute inset-0 -z-20 bg-grid opacity-[0.25] [mask-image:radial-gradient(circle_at_center,black,transparent_70%)]"/>
 
-        <Container className="text-center space-y-10 relative z-10">
+        <Container className="text-center space-y-6 relative z-10">
           {/* Badge conformité */}
           <motion.div
               initial={{opacity: 0, y: -20}}
@@ -55,11 +50,17 @@ export default function Hero() {
               viewport={{once: true}}
               transition={{duration: 0.4, delay: 0.1}}
           >
-            <h1 className="mt-6 sm:mt-10 md:mt-22 text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight">
-            <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-bold">
-              Bober
-            </span>
-              , c&#39;est partager, aider, organiser…
+            <h1 className="mt-6 sm:mt-10 md:mt-22 text-center">
+              <div className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl">
+                <span className="bg-gradient-to-tr from-[#00C9F7] to-[#166AF6] bg-clip-text text-transparent font-light">
+                  Bober
+                </span>
+                <span className="font-semibold" style={{color: '#25416E'}}> c&#39;est</span>
+              </div>
+              <div className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-semibold uppercase mt-3" style={{color: '#25416E', letterSpacing: '0.02em'}}>
+                COMMUNIQUER, S&#39;ENTRAIDER ET<br />
+                S&#39;ORGANISER.
+              </div>
             </h1>
           </motion.div>
 
@@ -68,9 +69,10 @@ export default function Hero() {
               initial={{opacity: 0, y: 20}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.6, delay: 0.6}}
-              className="mx-auto max-w-3xl text-base sm:text-lg text-accent leading-relaxed px-4 sm:px-6 md:px-0"
+              className="mx-auto max-w-3xl text-base sm:text-lg leading-relaxed px-4 sm:px-6 md:px-0"
+              style={{color: '#5A6B7B'}}
           >
-            Communiquez simplement et en toute confidentialité avec vos proches grâce à une messagerie sécurisée et des appels intégrés. Organisez ensuite vos événements et gérez vos échanges d’objets et de services, uniquement avec vos contacts, depuis une seule application.
+            Communiquez simplement et en toute confidentialité avec vos proches grâce à une messagerie sécurisée et des appels intégrés. Organisez ensuite vos événements et gérez vos échanges d'objets et de services, uniquement avec vos contacts, depuis une seule application.
           </motion.p>
 
           {/* Légende */}

@@ -112,11 +112,11 @@ export default function FeaturesHighlight() {
                 variants={imageVariants}
                 className="mt-8 md:mt-0 md:absolute md:inset-y-0 md:right-0 md:w-1/3 flex items-center justify-center">
               <Image
-                  src="/7 3 1.webp"
+                  src="/7 2.png"
                   alt="Aperçu mobile d'un événement privé"
                   width={351}
                   height={516}
-                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-110 sm:scale-110 h-auto object-contain drop-shadow-2xl"
+                  className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[520px] scale-110 sm:scale-150 h-auto object-contain drop-shadow-2xl "
                   priority
               />
             </motion.div>
