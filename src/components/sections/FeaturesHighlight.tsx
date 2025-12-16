@@ -55,9 +55,7 @@ export default function FeaturesHighlight() {
               <motion.p
                   variants={itemVariants}
                   className="text-sm sm:text-base md:text-lg text-white/95 leading-relaxed max-w-2xl">
-                Avec BOB, créez <strong className={"font-bold"}>des événements</strong> privés pour vos proches et
-                gérez
-                tout
+                Avec BOB, créez <strong className={"font-bold"}>des événements privés</strong> pour vos proches et gérez tout
                 ce qui est nécessaire en un seul endroit. Idéal pour un barbecue, un
                 déménagement ou un projet entre amis.
               </motion.p>
@@ -70,8 +68,7 @@ export default function FeaturesHighlight() {
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
-                <strong>Créez une liste avec vos besoins et services</strong> &nbsp;: par exemple,
-                    &#34;2 chaises pliantes&#34;, &#34;boissons fraîches&#34;, &#34;aide pour monter un meuble&#34;
+                <strong>Créer une liste avec vos besoins et services :</strong> par exemple, &#34;2 chaises pliantes&#34;, &#34;boissons fraîches&#34;, &#34;aide pour monter un meuble&#34;
               </span>
                 </motion.li>
                 <motion.li
@@ -79,15 +76,14 @@ export default function FeaturesHighlight() {
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
-                <strong>Chaque participant se positionne</strong> &nbsp;: chacun choisit un élément de la liste et
-                s&#39;engage à l&#39;apporter ou à le réaliser
+                <strong>Chaque participant se positionne :</strong> chacun choisit un élément de la liste et s&#39;engage à l&#39;apporter ou à le réaliser
               </span>
                 </motion.li>
                 <motion.li
                     variants={itemVariants}
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
-                  <span><strong>Invitations ciblées</strong> &nbsp;: 5, 10 ou 20 contacts</span>
+                  <span><strong>Invitations ciblées :</strong> 5, 10 ou 20 contacts</span>
                 </motion.li>
                 <motion.li
                     variants={itemVariants}
@@ -100,8 +96,7 @@ export default function FeaturesHighlight() {
                     className="flex gap-3">
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white shrink-0"/>
                   <span>
-                <strong>Positionnement en 1 clic</strong> &nbsp;: dès qu&#39;un participant se positionne, l&#39;échange
-                individuel est créé automatiquement
+                <strong>Positionnement en 1 clic :</strong> dès qu&#39;un participant se positionne, l&#39;échange individuel est créé automatiquement
               </span>
                 </motion.li>
               </motion.ul>
