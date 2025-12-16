@@ -1,49 +1,46 @@
 "use client"
 
-import { FeaturesCard } from "@/components/FeaturesCard"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import {motion} from "framer-motion"
 import Container from "@/components/ui/Container"
+// import { FeaturesCard } from "@/components/FeaturesCard"
 
 export default function Features() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+      transition: { duration: 0.6 },
     },
   }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
-
   const imageVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay: 0.3 } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, delay: 0.2 }
+    },
   }
 
   return (
     <section
       aria-labelledby="features-heading"
-      className="relative py-16 md:py-24"
-      style={{backgroundColor: '#E8F4F8'}}
+      className="relative py-16 md:py-24 "
       id="features"
     >
       {/* Background decorative image */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 -top-1/2  pointer-events-none">
         <Image
           src="/Frame 1000001361.png"
           alt=""
           fill
-          className="object-cover opacity-50"
+          className="object-contain opacity-50"
           loading="lazy"
           quality={90}
         />
       </div>
-
-      <Container className="relative z-10">
+      <Container className="relative z-10 max-w-full px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -56,12 +53,31 @@ export default function Features() {
             Fonctionnalités principales
           </h2>
 
-          {/* Features grid with central image */}
+          {/* Main features content image - MADE LARGER */}
+          <motion.div
+            variants={imageVariants}
+            className="flex justify-center items-center"
+          >
+            <Image
+              src="/Group 1000001359.png"
+              alt="Fonctionnalités de l'application BOB - Bob Call, Messagerie intégrée, Échanges d'objets et services, Rappels et agenda, Événements privés, Entre proches uniquement, Bob IA, et Confidentialité intégrée"
+              width={1800}
+              height={1000}
+              className="w-full h-auto object-contain min-w-[1800px]"
+              priority
+              quality={95}
+            />
+          </motion.div>
+
+          {/* PREVIOUS FEATURE CARDS CODE - COMMENTED OUT FOR REFERENCE */}
+          {/*
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
 
             {/* Left column features */}
+            {/*
             <div className="space-y-8 lg:pr-8">
               {/* Bob Call */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880141.svg"
@@ -71,8 +87,10 @@ export default function Features() {
                   titleId="feature-bobcall"
                 />
               </motion.div>
+              */}
 
               {/* Messagerie intégrée */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880141.svg"
@@ -82,8 +100,10 @@ export default function Features() {
                   titleId="feature-messages"
                 />
               </motion.div>
+              */}
 
               {/* Échanges d'objets & services */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880138.svg"
@@ -93,8 +113,10 @@ export default function Features() {
                   titleId="feature-echanges"
                 />
               </motion.div>
+              */}
 
               {/* Bob IA */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880142.svg"
@@ -105,8 +127,10 @@ export default function Features() {
                 />
               </motion.div>
             </div>
+            */}
 
             {/* Central image */}
+            {/*
             <motion.div
               variants={imageVariants}
               className="flex justify-center items-center py-8 lg:py-0"
@@ -120,10 +144,13 @@ export default function Features() {
                 priority
               />
             </motion.div>
+            */}
 
             {/* Right column features */}
+            {/*
             <div className="space-y-8 lg:pl-8">
               {/* Rappels & agenda */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880140.svg"
@@ -133,8 +160,10 @@ export default function Features() {
                   titleId="feature-rappels"
                 />
               </motion.div>
+              */}
 
               {/* Événements privés */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880139.svg"
@@ -144,8 +173,10 @@ export default function Features() {
                   titleId="feature-evenements"
                 />
               </motion.div>
+              */}
 
               {/* Entre proches uniquement */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Entre proches.svg"
@@ -155,8 +186,10 @@ export default function Features() {
                   titleId="feature-proches"
                 />
               </motion.div>
+              */}
 
               {/* Confidentialité intégrée */}
+              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880142.svg"
@@ -168,6 +201,7 @@ export default function Features() {
               </motion.div>
             </div>
           </div>
+          */}
         </motion.div>
       </Container>
     </section>

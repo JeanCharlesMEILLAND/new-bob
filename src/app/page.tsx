@@ -7,6 +7,9 @@ import HeroEN from '../components/sections/Hero.en'
 import FeaturesHighlightFR from "../components/sections/FeaturesHighlight"
 import FeaturesHighlightEN from "../components/sections/FeaturesHighlight.en"
 
+import MarketplaceFR from "../components/sections/Marketplace"
+import MarketplaceEN from "../components/sections/Marketplace.en"
+
 import FeaturesFR from '../components/sections/Features'
 import FeaturesEN from '../components/sections/Features.en'
 
@@ -38,6 +41,7 @@ export default async function Page({
   const Hero = lang === 'en' ? HeroEN : HeroFR
   const Features = lang === 'en' ? FeaturesEN : FeaturesFR
   const FeaturesHighlight = lang === 'en' ? FeaturesHighlightEN : FeaturesHighlightFR
+  const Marketplace = lang === 'en' ? MarketplaceEN : MarketplaceFR
   const Testimonials = lang === 'en' ? TestimonialsEN : TestimonialsFR
   const CTA = lang === 'en' ? CTAEN : CTAFR
 
@@ -46,6 +50,7 @@ export default async function Page({
       <Hero />
       <Features />
       <FeaturesHighlight />
+      <Marketplace />
       <Testimonials />
       <CTA />
     </>
