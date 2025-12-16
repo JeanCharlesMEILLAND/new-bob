@@ -70,22 +70,30 @@ export default function Hero() {
               transition={{duration: 0.6, delay: 0.6}}
               className="mx-auto max-w-3xl text-base sm:text-lg text-accent leading-relaxed px-4 sm:px-6 md:px-0"
           >
-            Gérez vos échanges d&#39;
-            <strong className="text-accent">objets</strong>, de{" "}
-            <strong className="text-accent">services</strong> et vos{" "}
-            <strong className="text-accent">événements</strong> — en toute
-            simplicité et confidentialité, uniquement avec vos contacts.
+            Communiquez simplement et en toute confidentialité avec vos proches grâce à une messagerie sécurisée et des appels intégrés. Organisez ensuite vos événements et gérez vos échanges d’objets et de services, uniquement avec vos contacts, depuis une seule application.
           </motion.p>
 
           {/* Légende */}
-          <motion.p
+          {/*<motion.p*/}
+          {/*    initial={{opacity: 0, y: 20}}*/}
+          {/*    animate={{opacity: 1, y: 0}}*/}
+          {/*    transition={{duration: 0.6, delay: 0.7}}*/}
+          {/*    className="text-base text-accent -mt-2"*/}
+          {/*>*/}
+          {/*  Disponible sur iOS et Android*/}
+          {/*</motion.p>*/}
+
+          {/* Texte de téléchargement */}
+          <motion.div
               initial={{opacity: 0, y: 20}}
               animate={{opacity: 1, y: 0}}
-              transition={{duration: 0.6, delay: 0.7}}
-              className="text-base text-accent -mt-2"
+              transition={{duration: 0.6, delay: 0.75}}
+              className="text-center !mb-0"
           >
-            Disponible sur iOS et Android
-          </motion.p>
+            <h2 className="text-xl sm:text-2xl font-semibold !mb-0 !pb-0" style={{color: '#25416E', marginBottom: '0'}}>
+              Télécharger l&#39;application
+            </h2>
+          </motion.div>
 
           {/* Badges stores optimisés */}
           <motion.div
@@ -93,7 +101,7 @@ export default function Hero() {
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.6, delay: 0.8}}
               id="download"
-              className="flex flex-wrap items-center justify-center gap-5 pt-4"
+              className="flex flex-wrap items-center justify-center gap-5 !mt-0 pt-2"
           >
             {/* App Store (priority) */}
             <motion.a
@@ -106,7 +114,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
             >
               <Image
-                  src="/app-badges/appstore.svg"
+                  src="/app-store.svg"
                   alt="Disponible sur l'App Store"
                   width={180}
                   height={54}
@@ -126,7 +134,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
             >
               <Image
-                  src="/app-badges/playstore.svg"
+                  src="/play-store.svg"
                   alt="Disponible sur Google Play"
                   width={190}
                   height={54}
