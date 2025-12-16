@@ -36,7 +36,7 @@ export default function TestimonialsEN() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8 }}
       id="testimonials"
-    >
+      className="">
       <Container>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -54,18 +54,15 @@ export default function TestimonialsEN() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <ItemSwiper className="mt-8">
+          <ItemSwiper className="mt-8 ">
             {TESTIMONIALS.map((t, index) => (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="max-w-xs mx-auto md:max-w-none cursor-grab bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl space-y-3 sm:space-y-5 w-full"
+                className={" max-w-xs mx-auto md:max-w-none cursor-grab bg-white p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl space-y-3 sm:space-y-5 w-full"}
                 key={index}
-                whileHover={{
-                  y: -5,
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
-                }}
+                whileHover={{y: -5, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)"}}
               >
                 <Image
                   src="/el_quote-alt.svg"
@@ -74,10 +71,8 @@ export default function TestimonialsEN() {
                   height={40}
                   className="ml-auto"
                 />
-                <p className="font-medium text-sm sm:text-base text-accent">{t.text}</p>
-                <p className="font-extrabold text-xs sm:text-sm md:text-base text-accent text-center">
-                  - {t.name}
-                </p>
+                <p className=" font-medium text-sm sm:text-base text-accent">{t.text}</p>
+                <p className="font-extrabold text-xs sm:text-sm md:text-base text-accent text-center"> - {t.name}</p>
               </motion.div>
             ))}
           </ItemSwiper>

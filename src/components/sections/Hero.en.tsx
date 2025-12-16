@@ -26,7 +26,7 @@ export default function HeroEn() {
           animate={{opacity: 1}}
           transition={{duration: 0.8}}
           className="relative pt-32 sm:pt-20 md:pt-28 pb-8 z-10"
-          style={{backgroundColor: '#E8F4F8'}}
+          // style={{backgroundColor: '#E8F4F8'}}
       >
 
         <Container className="text-center space-y-6 relative z-10">
