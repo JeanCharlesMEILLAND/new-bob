@@ -3,7 +3,7 @@
 import Image from "next/image"
 import {motion} from "framer-motion"
 import Container from "@/components/ui/Container"
-// import { FeaturesCard } from "@/components/FeaturesCard"
+import { FeaturesCard } from "@/components/FeaturesCard"
 
 export default function Features() {
   const containerVariants = {
@@ -12,6 +12,11 @@ export default function Features() {
       opacity: 1,
       transition: { duration: 0.6 },
     },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   }
 
   const imageVariants = {
@@ -26,7 +31,7 @@ export default function Features() {
   return (
     <section
       aria-labelledby="features-heading"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-24 "
+      className="relative py-12 sm:py-16 md:py-20 lg:py-24"
       id="features"
     >
       {/* Background decorative image */}
@@ -40,6 +45,7 @@ export default function Features() {
           quality={90}
         />
       </div>
+
       <Container className="relative z-10">
         <motion.div
           initial="hidden"
@@ -53,30 +59,12 @@ export default function Features() {
             Fonctionnalités principales
           </h2>
 
-          {/* Main features content image - Responsive */}
-          <motion.div
-            variants={imageVariants}
-            className="flex justify-center items-center "
-          >
-            <Image
-              src="/Group 1000001359.png"
-              alt="Fonctionnalités de l'application BOB - Bob Call, Messagerie intégrée, Échanges d'objets et services, Rappels et agenda, Événements privés, Entre proches uniquement, Bob IA, et Confidentialité intégrée"
-              width={1800}
-              height={1000}
-              className="w-full h-auto object-contain max-w-none lg:max-w-[1200px] xl:max-w-[1400px] 2xl:min-w-[1600px]"
-              priority
-            />
-          </motion.div>
+          {/* MOBILE VERSION - Show individual feature cards */}
+          <div className="md:hidden space-y-6">
 
-          {/* PREVIOUS FEATURE CARDS CODE - COMMENTED OUT FOR REFERENCE */}
-          {/*
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-
-            {/* Left column features */}
-            {/*
-            <div className="space-y-8 lg:pr-8">
+            {/* First 4 features (above image on mobile) */}
+            <div className="space-y-4">
               {/* Bob Call */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880141.svg"
@@ -86,10 +74,8 @@ export default function Features() {
                   titleId="feature-bobcall"
                 />
               </motion.div>
-              */}
 
               {/* Messagerie intégrée */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880141.svg"
@@ -99,10 +85,8 @@ export default function Features() {
                   titleId="feature-messages"
                 />
               </motion.div>
-              */}
 
               {/* Échanges d'objets & services */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880138.svg"
@@ -112,10 +96,8 @@ export default function Features() {
                   titleId="feature-echanges"
                 />
               </motion.div>
-              */}
 
               {/* Bob IA */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880142.svg"
@@ -126,30 +108,25 @@ export default function Features() {
                 />
               </motion.div>
             </div>
-            */}
 
-            {/* Central image */}
-            {/*
+            {/* Central image for mobile */}
             <motion.div
               variants={imageVariants}
-              className="flex justify-center items-center py-8 lg:py-0"
+              className="flex justify-center items-center py-6"
             >
               <Image
                 src="/Group 1000001319.png"
                 alt="Aperçu de l'application BOB"
-                width={500}
-                height={600}
-                className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-contain"
+                width={400}
+                height={500}
+                className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain drop-shadow-xl"
                 priority
               />
             </motion.div>
-            */}
 
-            {/* Right column features */}
-            {/*
-            <div className="space-y-8 lg:pl-8">
+            {/* Last 4 features (below image on mobile) */}
+            <div className="space-y-4">
               {/* Rappels & agenda */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880140.svg"
@@ -159,10 +136,8 @@ export default function Features() {
                   titleId="feature-rappels"
                 />
               </motion.div>
-              */}
 
               {/* Événements privés */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880139.svg"
@@ -172,10 +147,8 @@ export default function Features() {
                   titleId="feature-evenements"
                 />
               </motion.div>
-              */}
 
               {/* Entre proches uniquement */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Entre proches.svg"
@@ -185,10 +158,8 @@ export default function Features() {
                   titleId="feature-proches"
                 />
               </motion.div>
-              */}
 
               {/* Confidentialité intégrée */}
-              {/*
               <motion.div variants={itemVariants}>
                 <FeaturesCard
                   icon="/icons/Frame 1597880142.svg"
@@ -200,7 +171,22 @@ export default function Features() {
               </motion.div>
             </div>
           </div>
-          */}
+
+          {/* DESKTOP VERSION - Single large image */}
+          <motion.div
+            variants={imageVariants}
+            className="hidden md:flex justify-center items-center"
+          >
+            <Image
+              src="/Group 1000001359.svg"
+              alt="Fonctionnalités de l'application BOB - Bob Call, Messagerie intégrée, Échanges d'objets et services, Rappels et agenda, Événements privés, Entre proches uniquement, Bob IA, et Confidentialité intégrée"
+              width={1800}
+              height={1000}
+              className="w-full h-auto object-contain max-w-none lg:max-w-[1200px] xl:max-w-[1400px] 2xl:min-w-[1600px]"
+              priority
+              quality={95}
+            />
+          </motion.div>
         </motion.div>
       </Container>
     </section>

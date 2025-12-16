@@ -66,13 +66,13 @@ export default function CTAEn() {
                 no payments or subscriptions, and all features included.
               </motion.p>
 
-              {/* Store badges */}
+              {/* Store badges - Always on one line */}
               <motion.div
                   initial={{opacity: 0, y: 20}}
                   whileInView={{opacity: 1, y: 0}}
                   viewport={{once: true}}
                   transition={{duration: 0.6, delay: 0.4}}
-                  className="flex flex-wrap items-center justify-center gap-4 pt-2"
+                  className="flex flex-nowrap items-center justify-start gap-2 sm:gap-3 md:gap-5 pt-2"
               >
                 <motion.a
                     whileHover={{scale: 1.05}}
@@ -81,13 +81,14 @@ export default function CTAEn() {
                     aria-label="Download BOB on the App Store"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex"
+                    className="inline-flex flex-shrink-0"
                 >
                   <Image
-                      src="/app-badges/appstore.svg"
+                      src="/app-store.svg"
                       alt="Available on the App Store"
-                      width={190}
+                      width={180}
                       height={54}
+                      className="w-[140px] sm:w-[160px] md:w-[180px] h-auto"
                       loading="lazy"
                       decoding="async"
                   />
@@ -99,13 +100,14 @@ export default function CTAEn() {
                     aria-label="Get BOB on Google Play"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex"
+                    className="inline-flex flex-shrink-0"
                 >
                   <Image
-                      src="/app-badges/playstore.svg"
+                      src="/play-store.svg"
                       alt="Get it on Google Play"
                       width={190}
                       height={54}
+                      className="w-[140px] sm:w-[160px] md:w-[190px] h-auto"
                       loading="lazy"
                       decoding="async"
                   />

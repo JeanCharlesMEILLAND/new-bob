@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container'
 export default function Marketplace() {
   return (
     <Container className="mb-16 relative">
-      <div className=" md:px-10 relative px-4 sm:px-6 rounded-2xl sm:rounded-3xl bg-white shadow-lg">
+      <div className="px-4 py-8 pb-0 sm:px-6 md:px-10 sm:py-10 md:py-14 relative rounded-2xl sm:rounded-3xl bg-white shadow-lg">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
           <div className="text-center lg:text-left">
@@ -20,20 +20,20 @@ export default function Marketplace() {
               annonces et trouvez facilement ce qui est disponible autour de vous.
             </p>
 
-            {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* Download Buttons - Always on one line */}
+            <div className="flex flex-nowrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
               <Link
                 href="https://apps.apple.com/app/bob-marketplace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block"
+                className="inline-block flex-shrink-0"
               >
                 <Image
                   src="/app-store.svg"
                   alt="Télécharger sur l'App Store"
-                  width={140}
-                  height={48}
-                  className="h-12 w-auto"
+                  width={180}
+                  height={54}
+                  className="w-[120px] sm:w-[140px] md:w-[160px] h-auto"
                 />
               </Link>
 
@@ -41,14 +41,14 @@ export default function Marketplace() {
                 href="https://play.google.com/store/apps/details?id=com.bob.marketplace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block"
+                className="inline-block flex-shrink-0"
               >
                 <Image
                   src="/play-store.svg"
                   alt="Disponible sur Google Play"
-                  width={140}
-                  height={48}
-                  className="h-12 w-auto"
+                  width={190}
+                  height={54}
+                  className="w-[120px] sm:w-[140px] md:w-[160px] h-auto"
                 />
               </Link>
             </div>
