@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Container from '@/components/ui/Container'
 
 export default function Marketplace() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6">
+    <Container className="mb-16 relative">
+      <div className="relative px-4 sm:px-6 rounded-2xl sm:rounded-3xl bg-white shadow-lg">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
           <div className="text-center lg:text-left">
@@ -14,7 +15,7 @@ export default function Marketplace() {
             </h2>
 
             <p className="text-base md:text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              Le BOB Marketplace rassemble les annonces d'objets proposés par la
+              Le BOB Marketplace rassemble les annonces d&#39;objets proposés par la
               communauté : outils, livres, jeux, équipements et bien plus. Parcourez les
               annonces et trouvez facilement ce qui est disponible autour de vous.
             </p>
@@ -55,7 +56,7 @@ export default function Marketplace() {
 
           {/* Image Column */}
           <div className="relative">
-            <div className="relative z-10">
+            <div className="relative z-10 -mt-10">
               <Image
                 src="/Frame 1000001359.png"
                 alt="BOB Marketplace App Screenshots"
@@ -72,6 +73,6 @@ export default function Marketplace() {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   )
 }

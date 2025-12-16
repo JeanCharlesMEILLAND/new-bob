@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Container from '@/components/ui/Container'
 
 export default function MarketplaceEN() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-20 bg-white">
-      <div className="container mx-auto px-4 sm:px-6">
+    <Container className="mt-16 relative">
+      <div className="relative px-4 py-10 sm:px-6 md:px-10 sm:py-12 md:py-14 rounded-2xl sm:rounded-3xl bg-white shadow-lg">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
           <div className="text-center lg:text-left">
@@ -72,6 +73,6 @@ export default function MarketplaceEN() {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   )
 }
