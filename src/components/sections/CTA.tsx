@@ -74,7 +74,7 @@ export const CTA = () => {
                 <motion.a
                     whileHover={{scale: 1.05}}
                     whileTap={{scale: 0.95}}
-                    href="https://play.google.com/store/apps/details?id=com.bobapp"
+                    href="https://play.google.com/store/apps/details?id=app.bob"
                     aria-label="Télécharger BOB sur Google Play"
                     target="_blank"
                     rel="noopener noreferrer"
