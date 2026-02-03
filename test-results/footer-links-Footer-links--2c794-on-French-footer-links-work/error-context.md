@@ -1,0 +1,117 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Accueil":
+    - /url: /?lang=fr
+    - img "Logo BOB"
+  - link "English":
+    - /url: /?lang=en
+    - img "English"
+  - link "Français":
+    - /url: /?lang=fr
+    - img "Français"
+- main:
+  - text: Usage privé entre proches • Aucune transaction financière • Pas de mise en relation publique
+  - heading "Bober, c'est partager, aider, organiser…" [level=1]
+  - paragraph:
+    - text: Gérez vos échanges d'
+    - strong: objets
+    - text: ", de"
+    - strong: services
+    - text: et vos
+    - strong: événements
+    - text: — en toute simplicité et confidentialité, uniquement avec vos contacts.
+  - paragraph: Disponible sur iOS et Android
+  - link "Télécharger BOB sur l'App Store":
+    - /url: https://apps.apple.com/app/id6743935044
+    - img "Disponible sur l'App Store"
+  - link "Télécharger BOB sur Google Play":
+    - /url: https://play.google.com/store/apps/details?id=com.bobapp
+    - img "Disponible sur Google Play"
+  - region "Fonctionnalités principales":
+    - heading "Fonctionnalités principales" [level=2]
+    - article "Entre proches uniquement":
+      - heading "Entre proches uniquement" [level=3]
+      - paragraph: Fonctionne avec les contacts de votre téléphone. Pas d'annuaire public, pas d'inconnus.
+    - article "Messagerie intégrée":
+      - heading "Messagerie intégrée" [level=3]
+      - paragraph: Discutez en tête-à-tête pour vos échanges ou utilisez le chat d'événement pour coordonner un groupe.
+    - article "Échanges d'objets & services":
+      - heading "Échanges d'objets & services" [level=3]
+      - paragraph: "Proposez ou demandez en privé : un geste, une confirmation… et l'échange est suivi automatiquement."
+    - img "Aperçu de l'événement dans l'application"
+    - article "Rappels & agenda":
+      - heading "Rappels & agenda" [level=3]
+      - paragraph: Rappels automatiques des deux côtés et ajout à l'agenda pour éviter les oublis.
+    - article "Événements privés":
+      - heading "Événements privés" [level=3]
+      - paragraph: Invitez un petit groupe. Liste mixte (objets, consommables, services) et positionnement en 1 clic.
+    - article "Confidentialité intégrée":
+      - heading "Confidentialité intégrée" [level=3]
+      - paragraph: Aucune transaction financière. Aucune mise en relation publique. Historique personnel.
+  - heading "Organisez vos événements privés" [level=2]
+  - paragraph:
+    - text: Avec BOB, créez
+    - strong: des événements
+    - text: privés pour vos proches et gérez tout ce qui est nécessaire en un seul endroit. Idéal pour un barbecue, un déménagement ou un projet entre amis.
+  - list:
+    - listitem:
+      - strong: Créez une liste avec vos besoins et services
+      - text: ": par exemple, \"2 chaises pliantes\", \"boissons fraîches\", \"aide pour monter un meuble\""
+    - listitem:
+      - strong: Chaque participant se positionne
+      - text: ": chacun choisit un élément de la liste et s'engage à l'apporter ou à le réaliser"
+    - listitem:
+      - strong: Invitations ciblées
+      - text: ": 5, 10 ou 20 contacts"
+    - listitem:
+      - strong: Chat collectif pour coordonner tout le monde
+    - listitem:
+      - strong: Positionnement en 1 clic
+      - text: ": dès qu'un participant se positionne, l'échange individuel est créé automatiquement"
+  - img "Aperçu mobile d'un événement privé"
+  - img "Décor graphique"
+  - heading "Ils en parlent" [level=2]
+  - img "Décor graphique"
+  - paragraph: On a évité l'achat de matériel en doublon. L'interface est simple et tout le monde s'y retrouve.
+  - paragraph: "- Sarah, présidente d'asso"
+  - img "Décor graphique"
+  - paragraph: On se prête outillage et jeux pour les enfants. Les rappels évitent les oublis.
+  - paragraph: "- Karim, voisinage"
+  - img "Décor graphique"
+  - paragraph: Parfait pour animer un collectif interne sur plusieurs sites. Traçabilité légère mais suffisante.
+  - paragraph: "- Élodie, RH"
+  - img "Décor graphique"
+  - paragraph: On se prête outillage et jeux pour les enfants. Les rappels évitent les oublis.
+  - paragraph: "- Karim, voisinage"
+  - img "Décor graphique"
+  - paragraph: Parfait pour animer un collectif interne sur plusieurs sites. Traçabilité légère mais suffisante.
+  - paragraph: "- Élodie, RH"
+  - heading "Commencer à bober dès maintenant !" [level=2]
+  - paragraph: Avec BOB, organiser vos échanges privés devient simple et bien suivi. L'application est 100% gratuite, sans paiements ni abonnements, et toutes les fonctionnalités sont incluses.
+  - link "Télécharger BOB sur l'App Store":
+    - /url: https://apps.apple.com/app/id6743935044
+    - img "Disponible sur l'App Store"
+  - link "Télécharger BOB sur Google Play":
+    - /url: https://play.google.com/store/apps/details?id=com.bobapp
+    - img "Disponible sur Google Play"
+  - img "Aperçu de l'application sur smartphone"
+- contentinfo:
+  - paragraph: © 2025 BOB — Borrow and Back. Tous droits réservés.
+  - navigation "Liens légaux":
+    - list:
+      - listitem:
+        - link "CGU":
+          - /url: /conditions-utilisation?lang=fr
+      - listitem:
+        - link "Confidentialité":
+          - /url: /confidentialite?lang=fr
+      - listitem:
+        - link "Mentions légales":
+          - /url: /mentions-legales?lang=fr
+      - listitem:
+        - link "Contact":
+          - /url: mailto:hello@bobapp.fr
+- alert
+```
