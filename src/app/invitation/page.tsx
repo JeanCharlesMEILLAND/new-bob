@@ -10,7 +10,7 @@ export default function Home() {
   const [referrer, setReferrer] = useState<string | null>(null)
   const [downloadLinks, setDownloadLinks] = useState({
     ios: "https://apps.apple.com/app/id6743935044",
-    android: "https://play.google.com/store/apps/details?id=com.bobapp"
+    android: "https://play.google.com/store/apps/details?id=app.bob"
   })
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [isCopied, setIsCopied] = useState<boolean>(false)

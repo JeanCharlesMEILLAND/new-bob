@@ -23,7 +23,7 @@ interface DownloadLinks {
 // Default fallback links
 const DEFAULT_LINKS: DownloadLinks = {
   ios: "https://apps.apple.com/app/id6743935044",
-  android: "https://play.google.com/store/apps/details?id=com.bobapp"
+  android: "https://play.google.com/store/apps/details?id=app.bob"
 };
 
 export async function fetchDownloadLinks(): Promise<DownloadLinks> {

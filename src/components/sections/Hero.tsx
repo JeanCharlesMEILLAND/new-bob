@@ -9,7 +9,7 @@ import {useEffect, useState} from "react"
 export default function Hero() {
   const [downloadLinks, setDownloadLinks] = useState({
     ios: "https://apps.apple.com/app/id6743935044",
-    android: "https://play.google.com/store/apps/details?id=com.bobapp"
+    android: "https://play.google.com/store/apps/details?id=app.bob"
   });
 
   useEffect(() => {
