@@ -3,7 +3,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import {motion} from "framer-motion";
 
-export const CTA = () => {
+export default function CTA() {
   return (
       <Container className="mt-16 relative">
         {/* Custom background for CTA - properly sized */}
