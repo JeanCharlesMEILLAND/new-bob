@@ -25,18 +25,19 @@ export default function MentionsFR() {
         <p className="mb-4"><strong>Numéro SIRET :</strong> 940 267 057 00014</p>
         <p className="mb-4"><strong>Capital social :</strong> 10 000,00 €</p>
         <p className="mb-4"><strong>Numéro de TVA intracommunautaire :</strong> FR 94 940267057</p>
-        <p className="mb-4"><strong>Directeur de la publication :</strong> Jean-Claude Meilland</p>
+        <p className="mb-4"><strong>Directeur de la publication :</strong> Jean-Charles Meilland</p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-accent">2. Hébergement</h2>
-        <p className="mb-4"><strong>Hébergeur :</strong> Hostinger International Ltd</p>
-        <p className="mb-4"><strong>Adresse :</strong> 61 Lordou Vironos Street, 6023 Larnaca, Chypre</p>
-        <p className="mb-4"><strong>Numéro de téléphone :</strong> +370 5 214 3081</p>
+        <p className="mb-4"><strong>Hébergeur :</strong> OVHcloud</p>
+        <p className="mb-4"><strong>Raison sociale :</strong> OVH SAS</p>
+        <p className="mb-4"><strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France</p>
+        <p className="mb-4"><strong>Numéro de téléphone :</strong> +33 9 72 10 10 07</p>
         <p className="mb-4">
           <strong>Site web :</strong>{" "}
-          <a className="text-accent underline" href="https://www.hostinger.fr" target="_blank" rel="noopener noreferrer">
-            https://www.hostinger.fr
+          <a className="text-accent underline" href="https://www.ovhcloud.com/fr/" target="_blank" rel="noopener noreferrer">
+            https://www.ovhcloud.com
           </a>
         </p>
       </section>
@@ -87,7 +88,7 @@ export default function MentionsFR() {
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
         <p className="mb-4">
-          <strong>Délégué à la protection des données (DPO) :</strong> Jean-Claude Meilland –{" "}
+          <strong>Délégué à la protection des données (DPO) :</strong> Jean-Charles Meilland –{" "}
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
         <p className="mb-4">
@@ -153,12 +154,35 @@ export default function MentionsFR() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Crédits</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Intelligence Artificielle</h2>
+        <p className="mb-4">
+          L&apos;Application utilise des services d&apos;intelligence artificielle fournis par Mistral AI,
+          société française basée à Paris.
+        </p>
+        <p className="mb-4"><strong>Fournisseur :</strong> Mistral AI SAS</p>
+        <p className="mb-4"><strong>Adresse :</strong> 15 rue des Halles, 75001 Paris, France</p>
+        <p className="mb-4">
+          <strong>Site web :</strong>{" "}
+          <a className="text-accent underline" href="https://mistral.ai" target="_blank" rel="noopener noreferrer">
+            https://mistral.ai
+          </a>
+        </p>
+        <p className="mb-4">
+          Les données traitées par l&apos;IA sont soumises aux mêmes garanties de protection que celles
+          décrites dans notre politique de confidentialité, conformément au RGPD.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Crédits</h2>
         <p className="mb-4">
           <strong>Conception et développement :</strong> BOB BORROW &amp; BACK
         </p>
         <p className="mb-4">
-          <strong>Hébergement :</strong> Hostinger International Ltd
+          <strong>Hébergement :</strong> OVHcloud (OVH SAS – Roubaix, France)
+        </p>
+        <p className="mb-4">
+          <strong>Intelligence artificielle :</strong> Mistral AI (Paris, France)
         </p>
       </section>
     </main>

@@ -26,18 +26,19 @@ export default function MentionsEN() {
         <p className="mb-4"><strong>SIRET number:</strong> 940 267 057 00014</p>
         <p className="mb-4"><strong>Share capital:</strong> €10,000.00</p>
         <p className="mb-4"><strong>EU VAT number:</strong> FR 94 940267057</p>
-        <p className="mb-4"><strong>Publication director:</strong> Jean-Claude Meilland</p>
+        <p className="mb-4"><strong>Publication director:</strong> Jean-Charles Meilland</p>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-accent">2. Hosting</h2>
-        <p className="mb-4"><strong>Hosting provider:</strong> Hostinger International Ltd</p>
-        <p className="mb-4"><strong>Address:</strong> 61 Lordou Vironos Street, 6023 Larnaca, Cyprus</p>
-        <p className="mb-4"><strong>Phone number:</strong> +370 5 214 3081</p>
+        <p className="mb-4"><strong>Hosting provider:</strong> OVHcloud</p>
+        <p className="mb-4"><strong>Company name:</strong> OVH SAS</p>
+        <p className="mb-4"><strong>Address:</strong> 2 rue Kellermann, 59100 Roubaix, France</p>
+        <p className="mb-4"><strong>Phone number:</strong> +33 9 72 10 10 07</p>
         <p className="mb-4">
           <strong>Website:</strong>{" "}
-          <a className="text-accent underline" href="https://www.hostinger.fr" target="_blank" rel="noopener noreferrer">
-            https://www.hostinger.fr
+          <a className="text-accent underline" href="https://www.ovhcloud.com/en/" target="_blank" rel="noopener noreferrer">
+            https://www.ovhcloud.com
           </a>
         </p>
       </section>
@@ -85,7 +86,7 @@ export default function MentionsEN() {
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
         <p className="mb-4">
-          <strong>Data Protection Officer (DPO):</strong> Jean-Claude Meilland –{" "}
+          <strong>Data Protection Officer (DPO):</strong> Jean-Charles Meilland –{" "}
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
         <p className="mb-4">
@@ -148,12 +149,35 @@ export default function MentionsEN() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Credits</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Artificial Intelligence</h2>
+        <p className="mb-4">
+          The Application uses artificial intelligence services provided by Mistral AI, a French company based
+          in Paris.
+        </p>
+        <p className="mb-4"><strong>Provider:</strong> Mistral AI SAS</p>
+        <p className="mb-4"><strong>Address:</strong> 15 rue des Halles, 75001 Paris, France</p>
+        <p className="mb-4">
+          <strong>Website:</strong>{" "}
+          <a className="text-accent underline" href="https://mistral.ai" target="_blank" rel="noopener noreferrer">
+            https://mistral.ai
+          </a>
+        </p>
+        <p className="mb-4">
+          Data processed by AI is subject to the same protection guarantees as described in our privacy policy,
+          in accordance with the GDPR.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Credits</h2>
         <p className="mb-4">
           <strong>Design and development:</strong> BOB BORROW &amp; BACK
         </p>
         <p className="mb-4">
-          <strong>Hosting:</strong> Hostinger International Ltd
+          <strong>Hosting:</strong> OVHcloud (OVH SAS – Roubaix, France)
+        </p>
+        <p className="mb-4">
+          <strong>Artificial intelligence:</strong> Mistral AI (Paris, France)
         </p>
       </section>
     </main>
