@@ -4,7 +4,7 @@ export default function ConditionsFR() {
       <h1 className="text-3xl font-bold mb-6 text-accent">
         Conditions Générales d&apos;Utilisation de l&apos;application BOB (Borrow and Back)
       </h1>
-      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 10 février 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 30 juin 2026</p>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-accent">Préambule</h2>
