@@ -140,6 +140,23 @@ export default function ConditionsEN() {
           restrict, object to, and port your data. To exercise these rights:{" "}
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Access to Contacts</h3>
+        <p className="mb-4">
+          With your explicit consent given within the application, Bob accesses your address book and transmits
+          your contacts&apos; phone numbers to our servers (bob.strapi-pro.com) for the sole purpose of
+          identifying which of your contacts already use Bob and allowing you to reach them. Only the numbers
+          are transmitted (names remain on your device). The transmission is encrypted (HTTPS). No contact data
+          is transmitted without your prior agreement, and you may decline without preventing the use of the
+          other features.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Bob Web (browser synchronization)</h3>
+        <p className="mb-4">
+          If you enable Bob Web by scanning a QR code, your contact list (names and phone numbers) is
+          transmitted to your browser session, end-to-end encrypted and relayed by our servers (which cannot
+          read it). This transmission only occurs after your consent.
+        </p>
       </section>
 
       <section className="mb-8">

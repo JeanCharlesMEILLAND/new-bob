@@ -146,6 +146,24 @@ export default function ConditionsFR() {
           Pour exercer ces droits :{" "}
           <a className="text-accent underline" href="mailto:contact@bobapp.fr">contact@bobapp.fr</a>
         </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Accès aux contacts</h3>
+        <p className="mb-4">
+          Avec votre consentement explicite donné dans l&apos;application, Bob accède à votre répertoire et
+          transmet les numéros de téléphone de vos contacts à nos serveurs (bob.strapi-pro.com) dans le seul
+          but d&apos;identifier lesquels de vos contacts utilisent déjà Bob et de vous permettre de les
+          contacter. Seuls les numéros sont transmis (les noms restent sur votre appareil). La transmission est
+          chiffrée (HTTPS). Aucune donnée de contacts n&apos;est transmise sans votre accord préalable, et vous
+          pouvez refuser sans empêcher l&apos;utilisation des autres fonctionnalités.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Bob Web (synchronisation avec un navigateur)</h3>
+        <p className="mb-4">
+          Si vous activez Bob Web en scannant un QR code, votre liste de contacts (noms et numéros de
+          téléphone) est transmise à votre session de navigateur, chiffrée de bout en bout et relayée par nos
+          serveurs (qui ne peuvent pas la lire). Cette transmission n&apos;a lieu qu&apos;après votre
+          consentement.
+        </p>
       </section>
 
       <section className="mb-8">
