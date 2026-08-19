@@ -100,7 +100,7 @@ export default function MentionsFR() {
         </p>
         <p className="mb-4">
           Consultez notre politique de confidentialité complète :{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Politique de confidentialité
           </a>
         </p>

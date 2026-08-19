@@ -97,7 +97,7 @@ export default function MentionsEN() {
         </p>
         <p className="mb-4">
           View our full privacy policy:{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Privacy Policy
           </a>
         </p>

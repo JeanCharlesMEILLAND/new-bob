@@ -31,7 +31,7 @@ export default function ConditionsFR() {
         <p className="mb-4">
           L&apos;utilisation de l&apos;Application vaut acceptation pleine et entière des présentes CGU ainsi
           que de notre{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Politique de confidentialité
           </a>.
         </p>
@@ -136,7 +136,7 @@ export default function ConditionsFR() {
         <p className="mb-4">
           Les données collectées sont nécessaires à la fourniture du service et sont traitées conformément à
           notre{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Politique de confidentialité
           </a>.
         </p>

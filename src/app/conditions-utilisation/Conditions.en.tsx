@@ -31,7 +31,7 @@ export default function ConditionsEN() {
         </p>
         <p className="mb-4">
           Use of the Application constitutes full and unreserved acceptance of these Terms as well as our{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Privacy Policy
           </a>.
         </p>
@@ -131,7 +131,7 @@ export default function ConditionsEN() {
         <p className="mb-4">
           The data collected is necessary for the provision of the service and is processed in accordance with
           our{" "}
-          <a className="text-accent underline" href="/politique-confidentialite">
+          <a className="text-accent underline" href="/confidentialite">
             Privacy Policy
           </a>.
         </p>
