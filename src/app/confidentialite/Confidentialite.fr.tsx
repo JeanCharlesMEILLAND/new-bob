@@ -8,7 +8,7 @@ export default function ConfidentialiteFR() {
         Conformément au Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679) et à
         la loi n°78-17 du 6 janvier 1978 modifiée (Loi Informatique et Libertés).
       </p>
-      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 10 février 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 19 août 2026</p>
 
       <section className="mb-8" id="responsable">
         <h2 className="text-2xl font-semibold mb-4 text-accent">1. Responsable du traitement</h2>
@@ -45,6 +45,7 @@ export default function ConfidentialiteFR() {
           <li><strong>Contenus utilisateurs (UGC) :</strong> messages, descriptions d&apos;objets, photos</li>
           <li><strong>Données techniques :</strong> type d&apos;appareil, système d&apos;exploitation, adresse IP, logs de connexion, identifiants techniques</li>
           <li><strong>Données de navigation :</strong> cookies, pages consultées, durée de visite</li>
+          <li><strong>Données de localisation :</strong> position géographique précise (GPS), y compris en arrière-plan, uniquement si vous activez la fonctionnalité «&nbsp;Bob Localisation&nbsp;»</li>
         </ul>
       </section>
 
@@ -116,8 +117,24 @@ export default function ConfidentialiteFR() {
         </p>
       </section>
 
+      <section className="mb-8" id="localisation">
+        <h2 className="text-2xl font-semibold mb-4 text-accent">7. Données de localisation</h2>
+        <p className="mb-4">
+          L&apos;Application propose une fonctionnalité optionnelle de partage de position, «&nbsp;Bob
+          Localisation&nbsp;». Lorsque vous l&apos;activez, l&apos;Application accède à votre position
+          géographique précise (GPS), y compris lorsqu&apos;elle fonctionne en arrière-plan, le temps du partage.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li><strong>Finalité :</strong> partager votre position en temps réel avec les personnes que vous autorisez et l&apos;afficher sur une carte.</li>
+          <li><strong>Base légale :</strong> votre consentement (article 6.1.a du RGPD), donné au niveau du système (iOS/Android) puis dans l&apos;Application.</li>
+          <li><strong>Destinataires :</strong> uniquement les utilisateurs que vous autorisez explicitement ; l&apos;affichage cartographique s&apos;appuie sur Google Maps (Google Ireland Ltd.).</li>
+          <li><strong>Conservation :</strong> votre position est relayée en direct aux destinataires autorisés et n&apos;est pas enregistrée sur nos serveurs ; aucun historique de vos déplacements n&apos;est conservé.</li>
+          <li><strong>Vos contrôles :</strong> interrompre le partage à tout moment, retirer l&apos;autorisation d&apos;un contact, ou couper l&apos;accès à la localisation dans les réglages de l&apos;appareil.</li>
+        </ul>
+      </section>
+
       <section className="mb-8" id="transferts">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">7. Transferts de données hors UE</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Transferts de données hors UE</h2>
         <p className="mb-4">
           BOB BORROW &amp; BACK privilégie des prestataires situés en France et dans l&apos;Union européenne.
         </p>
@@ -135,7 +152,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="securite">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Sécurité des données</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Sécurité des données</h2>
         <p className="mb-4">
           Conformément à l&apos;article 32 du RGPD, BOB BORROW &amp; BACK met en œuvre des mesures techniques
           et organisationnelles appropriées pour garantir la sécurité des données :
@@ -150,7 +167,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="droits">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Vos droits</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">10. Vos droits</h2>
         <p className="mb-4">
           Conformément aux articles 15 à 22 du RGPD et aux articles 48 à 56 de la Loi Informatique et
           Libertés, vous disposez des droits suivants :
@@ -184,7 +201,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="cookies">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">10. Cookies</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">11. Cookies</h2>
         <p className="mb-4">
           Conformément à la directive européenne 2009/136/CE et aux recommandations de la CNIL (délibération
           n°2020-091 du 17 septembre 2020), l&apos;Application utilise les catégories de cookies suivantes :
@@ -210,7 +227,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="ia">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">11. Intelligence artificielle</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">12. Intelligence artificielle</h2>
         <p className="mb-4">
           L&apos;Application utilise des services d&apos;intelligence artificielle fournis par{" "}
           <strong>Mistral AI</strong> (Mistral AI SAS – 15 rue des Halles, 75001 Paris, France), société
@@ -224,7 +241,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="mineurs">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">12. Protection des mineurs</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">13. Protection des mineurs</h2>
         <p className="mb-4">
           L&apos;Application est destinée aux personnes âgées de 18 ans ou plus. Nous ne collectons pas
           sciemment de données personnelles de mineurs. Si nous découvrons qu&apos;un mineur a fourni des
@@ -233,7 +250,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="modifications">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">13. Modifications de la politique</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">14. Modifications de la politique</h2>
         <p className="mb-4">
           BOB BORROW &amp; BACK se réserve le droit de modifier la présente politique de confidentialité à tout
           moment. En cas de modification substantielle, les utilisateurs seront informés par notification dans
@@ -242,7 +259,7 @@ export default function ConfidentialiteFR() {
       </section>
 
       <section className="mb-8" id="contact">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">14. Contact</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">15. Contact</h2>
         <p className="mb-4">
           Pour toute question relative à la présente politique de confidentialité ou pour exercer vos droits :
         </p>

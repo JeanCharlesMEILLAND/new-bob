@@ -7,7 +7,7 @@ export default function PrivacyPolicyEN() {
         In accordance with the General Data Protection Regulation (GDPR – EU Regulation 2016/679) and French
         Law No. 78-17 of January 6, 1978 (Data Protection Act).
       </p>
-      <p className="mb-8 text-sm text-gray-600">Last updated: February 10, 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Last updated: August 19, 2026</p>
 
       <section className="mb-8" id="controller">
         <h2 className="text-2xl font-semibold mb-4 text-accent">1. Data Controller</h2>
@@ -43,6 +43,7 @@ export default function PrivacyPolicyEN() {
           <li><strong>User-generated content (UGC):</strong> messages, item descriptions, photos</li>
           <li><strong>Technical data:</strong> device type, operating system, IP address, connection logs, technical identifiers</li>
           <li><strong>Browsing data:</strong> cookies, pages visited, visit duration</li>
+          <li><strong>Location data:</strong> precise geographic location (GPS), including in the background, only if you enable the &quot;Bob Localisation&quot; feature</li>
         </ul>
       </section>
 
@@ -113,8 +114,24 @@ export default function PrivacyPolicyEN() {
         </p>
       </section>
 
+      <section className="mb-8" id="location">
+        <h2 className="text-2xl font-semibold mb-4 text-accent">7. Location Data</h2>
+        <p className="mb-4">
+          The Application offers an optional location-sharing feature, &quot;Bob Localisation&quot;. When you
+          enable it, the Application accesses your precise geographic location (GPS), including while running in
+          the background, for the duration of the sharing.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li><strong>Purpose:</strong> share your location in real time with the people you authorize and display it on a map.</li>
+          <li><strong>Legal basis:</strong> your consent (article 6.1.a GDPR), granted at the operating-system level (iOS/Android) and then within the Application.</li>
+          <li><strong>Recipients:</strong> only the users you explicitly authorize; map display relies on Google Maps (Google Ireland Ltd.).</li>
+          <li><strong>Retention:</strong> your location is relayed live to authorized recipients and is not stored on our servers; no history of your movements is kept.</li>
+          <li><strong>Your controls:</strong> stop sharing at any time, revoke a contact&apos;s authorization, or disable location access in your device settings.</li>
+        </ul>
+      </section>
+
       <section className="mb-8" id="transfers">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">7. International Data Transfers</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">8. International Data Transfers</h2>
         <p className="mb-4">
           BOB BORROW &amp; BACK prioritizes providers located in France and the European Union.
         </p>
@@ -132,7 +149,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="security">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">8. Data Security</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Data Security</h2>
         <p className="mb-4">
           In accordance with article 32 of the GDPR, BOB BORROW &amp; BACK implements appropriate technical
           and organizational measures to ensure data security:
@@ -147,7 +164,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="rights">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">9. Your Rights</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">10. Your Rights</h2>
         <p className="mb-4">
           In accordance with articles 15 to 22 of the GDPR and articles 48 to 56 of the French Data
           Protection Act, you have the following rights:
@@ -180,7 +197,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="cookies">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">10. Cookies</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">11. Cookies</h2>
         <p className="mb-4">
           In accordance with European Directive 2009/136/EC and CNIL recommendations (deliberation No. 2020-091
           of September 17, 2020), the Application uses the following categories of cookies:
@@ -206,7 +223,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="ai">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">11. Artificial Intelligence</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">12. Artificial Intelligence</h2>
         <p className="mb-4">
           The Application uses artificial intelligence services provided by{" "}
           <strong>Mistral AI</strong> (Mistral AI SAS – 15 rue des Halles, 75001 Paris, France), a French
@@ -220,7 +237,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="minors">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">12. Protection of Minors</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">13. Protection of Minors</h2>
         <p className="mb-4">
           The Application is intended for individuals aged 18 or over. We do not knowingly collect personal
           data from minors. If we discover that a minor has provided personal data, it will be deleted as soon
@@ -229,7 +246,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="changes">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">13. Changes to This Policy</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">14. Changes to This Policy</h2>
         <p className="mb-4">
           BOB BORROW &amp; BACK reserves the right to modify this privacy policy at any time. In the event of
           a substantial change, users will be notified via a notification in the Application or by email. The
@@ -238,7 +255,7 @@ export default function PrivacyPolicyEN() {
       </section>
 
       <section className="mb-8" id="contact">
-        <h2 className="text-2xl font-semibold mb-4 text-accent">14. Contact</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-accent">15. Contact</h2>
         <p className="mb-4">
           For any questions regarding this privacy policy or to exercise your rights:
         </p>
