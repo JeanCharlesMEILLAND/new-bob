@@ -4,7 +4,7 @@ export default function ConditionsFR() {
       <h1 className="text-3xl font-bold mb-6 text-accent">
         Conditions Générales d&apos;Utilisation de l&apos;application BOB (Borrow and Back)
       </h1>
-      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 30 juin 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 12 octobre 2026</p>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-accent">Préambule</h2>
@@ -150,11 +150,23 @@ export default function ConditionsFR() {
         <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Accès aux contacts</h3>
         <p className="mb-4">
           Avec votre consentement explicite donné dans l&apos;application, Bob accède à votre répertoire et
-          transmet les numéros de téléphone de vos contacts à nos serveurs (bob.strapi-pro.com) dans le seul
-          but d&apos;identifier lesquels de vos contacts utilisent déjà Bob et de vous permettre de les
+          transmet les numéros de téléphone de vos contacts à nos serveurs (bob.strapi-pro.com) afin
+          d&apos;identifier lesquels de vos contacts utilisent déjà Bob et de vous permettre de les
           contacter. Seuls les numéros sont transmis (les noms restent sur votre appareil). La transmission est
           chiffrée (HTTPS). Aucune donnée de contacts n&apos;est transmise sans votre accord préalable, et vous
           pouvez refuser sans empêcher l&apos;utilisation des autres fonctionnalités.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Alerte d&apos;arrivée de vos contacts (facultative)</h3>
+        <p className="mb-4">
+          Si vous activez l&apos;option «&nbsp;Contacts qui rejoignent Bob&nbsp;» (demande d&apos;accord dédiée,
+          désactivable à tout moment dans Profil → Préférences de notifications), nous conservons une empreinte
+          codée des numéros de vos contacts qui n&apos;utilisent pas encore Bob, afin de vous prévenir
+          lorsqu&apos;ils s&apos;inscrivent. Nous ne conservons jamais leurs noms ni leurs numéros en clair. Ces
+          empreintes sont supprimées dès que le contact rejoint Bob, au plus tard 90 jours après votre dernière
+          synchronisation, et immédiatement si vous désactivez l&apos;option ou supprimez votre compte. Voir
+          la{" "}
+          <a className="text-accent underline" href="/confidentialite">Politique de confidentialité</a>.
         </p>
 
         <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Bob Web (synchronisation avec un navigateur)</h3>

@@ -5,7 +5,7 @@ export default function ConditionsEN() {
       <h1 className="text-3xl font-bold mb-6 text-accent">
         General Terms of Use for the BOB (Borrow and Back) Application
       </h1>
-      <p className="mb-8 text-sm text-gray-600">Last updated: June 30, 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Last updated: October 12, 2026</p>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-accent">Preamble</h2>
@@ -144,11 +144,22 @@ export default function ConditionsEN() {
         <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Access to Contacts</h3>
         <p className="mb-4">
           With your explicit consent given within the application, Bob accesses your address book and transmits
-          your contacts&apos; phone numbers to our servers (bob.strapi-pro.com) for the sole purpose of
-          identifying which of your contacts already use Bob and allowing you to reach them. Only the numbers
+          your contacts&apos; phone numbers to our servers (bob.strapi-pro.com) to
+          identify which of your contacts already use Bob and to allow you to reach them. Only the numbers
           are transmitted (names remain on your device). The transmission is encrypted (HTTPS). No contact data
           is transmitted without your prior agreement, and you may decline without preventing the use of the
           other features.
+        </p>
+
+        <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Alert when your contacts join (optional)</h3>
+        <p className="mb-4">
+          If you turn on the &quot;Contacts joining Bob&quot; option (dedicated consent request, can be turned off at
+          any time in Profile → Notification preferences), we keep a coded fingerprint of the numbers of your
+          contacts who do not use Bob yet, so we can let you know when they sign up. We never keep their names or
+          their numbers in readable form. These fingerprints are deleted as soon as the contact joins Bob, at the
+          latest 90 days after your last sync, and immediately if you turn the option off or delete your account.
+          See the{" "}
+          <a className="text-accent underline" href="/confidentialite">Privacy Policy</a>.
         </p>
 
         <h3 className="text-xl font-semibold mb-3 mt-6 text-accent">Bob Web (browser synchronization)</h3>

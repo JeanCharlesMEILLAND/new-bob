@@ -7,7 +7,7 @@ export default function PrivacyPolicyEN() {
         In accordance with the General Data Protection Regulation (GDPR – EU Regulation 2016/679) and French
         Law No. 78-17 of January 6, 1978 (Data Protection Act).
       </p>
-      <p className="mb-8 text-sm text-gray-600">Last updated: August 19, 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Last updated: October 12, 2026</p>
 
       <section className="mb-8" id="controller">
         <h2 className="text-2xl font-semibold mb-4 text-accent">1. Data Controller</h2>
@@ -39,7 +39,7 @@ export default function PrivacyPolicyEN() {
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Identification data:</strong> name, email address, phone number (if provided)</li>
           <li><strong>Profile data:</strong> avatar, bio, optional fields</li>
-          <li><strong>Contact data:</strong> if you authorize access for the &quot;close contacts only&quot; feature</li>
+          <li><strong>Contact data:</strong> if you authorize access for the &quot;close contacts only&quot; feature. If you also turn on the &quot;Contacts joining Bob&quot; option, we keep a coded fingerprint (an HMAC that cannot be reversed without our secret key) of the numbers of your contacts who do not use Bob yet; never their names, never their numbers in readable form</li>
           <li><strong>User-generated content (UGC):</strong> messages, item descriptions, photos</li>
           <li><strong>Technical data:</strong> device type, operating system, IP address, connection logs, technical identifiers</li>
           <li><strong>Browsing data:</strong> cookies, pages visited, visit duration</li>
@@ -54,6 +54,7 @@ export default function PrivacyPolicyEN() {
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li>Provision and management of the Application&apos;s features (lending/borrowing, messaging, collectives, reminders)</li>
+          <li>Letting you know when someone from your address book joins Bob (&quot;Contacts joining Bob&quot; option)</li>
           <li>Creation and management of your user account</li>
           <li>Security, fraud prevention, and content moderation</li>
           <li>Service improvement and anonymized statistics</li>
@@ -70,7 +71,7 @@ export default function PrivacyPolicyEN() {
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Performance of a contract:</strong> processing necessary to provide the service (article 6.1.b GDPR)</li>
           <li><strong>Legitimate interest:</strong> security, service improvement, anti-abuse (article 6.1.f GDPR)</li>
-          <li><strong>Consent:</strong> contacts access, push notifications, non-essential cookies (article 6.1.a GDPR)</li>
+          <li><strong>Consent:</strong> contacts access, alert when contacts join (dedicated consent request), push notifications, non-essential cookies (article 6.1.a GDPR)</li>
           <li><strong>Legal obligation:</strong> lawful requests, mandatory retention (article 6.1.c GDPR)</li>
         </ul>
       </section>
@@ -87,6 +88,7 @@ export default function PrivacyPolicyEN() {
           <li><strong>Messages and content (UGC):</strong> while the account is active or until deletion by the user</li>
           <li><strong>Non-essential cookies:</strong> up to 13 months in accordance with CNIL recommendations</li>
           <li><strong>Billing data:</strong> 10 years in accordance with the French Commercial Code (article L.123-22)</li>
+          <li><strong>Fingerprints of contact numbers</strong> (&quot;Contacts joining Bob&quot; option): until the contact joins Bob, at most 90 days after your last address book sync; deleted immediately if you turn the option off or delete your account</li>
         </ul>
       </section>
 
@@ -105,6 +107,11 @@ export default function PrivacyPolicyEN() {
           </li>
           <li>
             <strong>Technical services:</strong> analytics, email/push notification delivery, anti-spam
+          </li>
+          <li>
+            <strong>Push notifications:</strong> Google (Firebase Cloud Messaging) and Apple (Apple Push Notification
+            service) deliver notifications; for the alert that a contact joined, they carry the contact&apos;s first name
+            and the way their number is written in your address book
           </li>
         </ul>
         <p className="mb-4">
@@ -176,7 +183,7 @@ export default function PrivacyPolicyEN() {
           <li><strong>Right to restriction</strong> (article 18 GDPR): obtain restriction of processing</li>
           <li><strong>Right to object</strong> (article 21 GDPR): object to the processing of your data</li>
           <li><strong>Right to portability</strong> (article 20 GDPR): receive your data in a structured, machine-readable format</li>
-          <li><strong>Withdrawal of consent:</strong> withdraw your consent at any time, without affecting the lawfulness of prior processing</li>
+          <li><strong>Withdrawal of consent:</strong> withdraw your consent at any time, without affecting the lawfulness of prior processing; turning off the &quot;Contacts joining Bob&quot; option (Profile → Notification preferences) immediately erases the stored fingerprints</li>
           <li><strong>Post-mortem directives:</strong> define instructions regarding your data after your death (article 85 of the French Data Protection Act)</li>
         </ul>
         <p className="mb-4">

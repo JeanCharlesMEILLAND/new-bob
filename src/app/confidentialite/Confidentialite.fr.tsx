@@ -8,7 +8,7 @@ export default function ConfidentialiteFR() {
         Conformément au Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679) et à
         la loi n°78-17 du 6 janvier 1978 modifiée (Loi Informatique et Libertés).
       </p>
-      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 19 août 2026</p>
+      <p className="mb-8 text-sm text-gray-600">Dernière mise à jour : 12 octobre 2026</p>
 
       <section className="mb-8" id="responsable">
         <h2 className="text-2xl font-semibold mb-4 text-accent">1. Responsable du traitement</h2>
@@ -41,7 +41,7 @@ export default function ConfidentialiteFR() {
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Données d&apos;identification :</strong> nom, prénom, adresse e-mail, numéro de téléphone (si fourni)</li>
           <li><strong>Données de profil :</strong> avatar, description, champs facultatifs</li>
-          <li><strong>Données de contacts :</strong> si vous autorisez l&apos;accès pour la fonctionnalité « entre proches »</li>
+          <li><strong>Données de contacts :</strong> si vous autorisez l&apos;accès pour la fonctionnalité « entre proches ». Si vous activez en plus l&apos;option «&nbsp;Contacts qui rejoignent Bob&nbsp;», nous conservons une empreinte codée (calcul HMAC, irréversible sans notre clé secrète) des numéros de vos contacts qui n&apos;utilisent pas encore Bob ; jamais leurs noms, jamais leurs numéros en clair</li>
           <li><strong>Contenus utilisateurs (UGC) :</strong> messages, descriptions d&apos;objets, photos</li>
           <li><strong>Données techniques :</strong> type d&apos;appareil, système d&apos;exploitation, adresse IP, logs de connexion, identifiants techniques</li>
           <li><strong>Données de navigation :</strong> cookies, pages consultées, durée de visite</li>
@@ -57,6 +57,7 @@ export default function ConfidentialiteFR() {
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li>Fourniture et gestion des fonctionnalités de l&apos;Application (prêt/emprunt, messagerie, collectifs, rappels)</li>
           <li>Création et gestion de votre compte utilisateur</li>
+          <li>Vous prévenir lorsqu&apos;une personne de votre carnet d&apos;adresses rejoint Bob (option «&nbsp;Contacts qui rejoignent Bob&nbsp;»)</li>
           <li>Sécurité, prévention de la fraude et modération des contenus</li>
           <li>Amélioration du service et statistiques anonymisées</li>
           <li>Support client et communications opérationnelles</li>
@@ -73,7 +74,7 @@ export default function ConfidentialiteFR() {
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Exécution du contrat :</strong> traitement nécessaire à la fourniture du service (article 6.1.b du RGPD)</li>
           <li><strong>Intérêt légitime :</strong> sécurité, amélioration du service, lutte contre les abus (article 6.1.f du RGPD)</li>
-          <li><strong>Consentement :</strong> accès aux contacts, notifications push, cookies non essentiels (article 6.1.a du RGPD)</li>
+          <li><strong>Consentement :</strong> accès aux contacts, alerte d&apos;arrivée des contacts (demande d&apos;accord dédiée), notifications push, cookies non essentiels (article 6.1.a du RGPD)</li>
           <li><strong>Obligation légale :</strong> réquisitions judiciaires, conservation obligatoire (article 6.1.c du RGPD)</li>
         </ul>
       </section>
@@ -90,6 +91,7 @@ export default function ConfidentialiteFR() {
           <li><strong>Messages et contenus (UGC) :</strong> tant que le compte est actif ou jusqu&apos;à suppression par l&apos;utilisateur</li>
           <li><strong>Cookies non essentiels :</strong> 13 mois maximum conformément aux recommandations de la CNIL</li>
           <li><strong>Données de facturation :</strong> 10 ans conformément au Code de commerce (article L.123-22)</li>
+          <li><strong>Empreintes des numéros de contacts</strong> (option «&nbsp;Contacts qui rejoignent Bob&nbsp;») : jusqu&apos;à l&apos;inscription du contact sur Bob, au plus 90 jours après votre dernière synchronisation du carnet ; supprimées immédiatement si vous désactivez l&apos;option ou supprimez votre compte</li>
         </ul>
       </section>
 
@@ -108,6 +110,11 @@ export default function ConfidentialiteFR() {
           </li>
           <li>
             <strong>Services techniques :</strong> analytics, envoi d&apos;emails/notifications push, anti-spam
+          </li>
+          <li>
+            <strong>Notifications push :</strong> Google (Firebase Cloud Messaging) et Apple (Apple Push Notification
+            service) acheminent les notifications ; pour l&apos;alerte d&apos;arrivée d&apos;un contact, elles transportent
+            son prénom et l&apos;écriture de son numéro telle qu&apos;elle figure dans votre carnet
           </li>
         </ul>
         <p className="mb-4">
@@ -179,7 +186,7 @@ export default function ConfidentialiteFR() {
           <li><strong>Droit à la limitation</strong> (article 18 du RGPD) : obtenir la limitation du traitement</li>
           <li><strong>Droit d&apos;opposition</strong> (article 21 du RGPD) : vous opposer au traitement de vos données</li>
           <li><strong>Droit à la portabilité</strong> (article 20 du RGPD) : recevoir vos données dans un format structuré et lisible</li>
-          <li><strong>Retrait du consentement</strong> : retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur</li>
+          <li><strong>Retrait du consentement</strong> : retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur ; désactiver l&apos;option «&nbsp;Contacts qui rejoignent Bob&nbsp;» (Profil → Préférences de notifications) efface immédiatement les empreintes conservées</li>
           <li><strong>Directives post-mortem</strong> : définir des directives relatives au sort de vos données après votre décès (article 85 de la Loi Informatique et Libertés)</li>
         </ul>
         <p className="mb-4">
